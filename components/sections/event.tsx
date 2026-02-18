@@ -15,10 +15,10 @@ export function EventSection() {
       reservations: 18,
     },
     {
-      location: "関西試乗会",
-      date: "2026年4月5日（土）",
-      venue: "大阪城公園 太陽の広場",
-      reservations: 11,
+      location: "各地家電量販店試乗会",
+      date: "詳しくは公式LINEにて通知いたします。",
+      venue: "",
+      reservations: 0,
     },
   ]
 
@@ -47,7 +47,7 @@ export function EventSection() {
                   {event.location}
                 </h3>
                 <p className="text-sm text-[hsl(var(--soft-brown))]">
-                  {event.date} / {event.venue}
+                  {event.date}{event.venue ? ` / ${event.venue}` : ""}
                 </p>
               </div>
 
