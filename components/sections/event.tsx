@@ -11,7 +11,7 @@ export function EventSection() {
     {
       location: "東京（高円寺）試乗会",
       date: "2026年3月29日（土）",
-      venue: "東京ビッグサイト 西ホール",
+      venue: "ジェイアール東日本都市開発 高架下空き倉庫",
       reservations: 18,
     },
     {
