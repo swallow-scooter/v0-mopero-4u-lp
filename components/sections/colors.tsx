@@ -26,8 +26,8 @@ const colorOptions = [
     featured: false,
   },
   {
-    name: "オリーブ",
-    nameEn: "Olive",
+    name: "オリーブグリーン",
+    nameEn: "Olive Green",
     hex: "#6b7c4e",
     image: "/images/color-olive.jpg",
     featured: false,
