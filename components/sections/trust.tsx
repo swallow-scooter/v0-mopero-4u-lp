@@ -4,9 +4,9 @@ export function TrustSection() {
   const trustItems = [
     {
       icon: ShieldCheck,
-      title: "性能等確認制度 適合",
+      title: "性能等確認制度 申請中",
       description:
-        "国土交通省が定める保安基準に適合。公道を安全に走行できることを確認済みです。",
+        "国土交通省が定める保安基準への適合に向けて、性能等確認制度に申請中です。",
     },
     {
       icon: Lock,
