@@ -12,7 +12,7 @@ export function TrustSection() {
       icon: Lock,
       title: "NFCキーシステム",
       description:
-        "スマートフォンや専用キーでロック解除。物理鍵の紛失リスクを減らし、セキュリティを向上。",
+        "専用キーで電源のオンオフ切り替え。盗難リスクを防ぎ、セキュリティを向上。",
     },
     {
       icon: ParkingSquare,
