@@ -1,4 +1,5 @@
 import { ShieldCheck, Lock, ParkingSquare } from "lucide-react"
+import Image from "next/image"
 
 export function TrustSection() {
   const trustItems = [
@@ -7,18 +8,24 @@ export function TrustSection() {
       title: "性能等確認制度 申請中",
       description:
         "国土交通省が定める保安基準への適合に向けて、性能等確認制度に申請中です。",
+      image: "/images/trust-certification.jpg",
+      alt: "性能等確認制度の申請書類",
     },
     {
       icon: Lock,
       title: "NFCキーシステム",
       description:
         "専用キーで電源のオンオフ切り替え。盗難リスクを防ぎ、セキュリティを向上。",
+      image: "/images/trust-nfckey.jpg",
+      alt: "NFCキーで電源をオンにする様子",
     },
     {
       icon: ParkingSquare,
       title: "駐輪ラック対応サイズ",
       description:
         "一般的な駐輪場のラックにそのまま停められます。マンションや駅前の駐輪場もOK。",
+      image: "/images/trust-parking.jpg",
+      alt: "監視カメラのある駐輪場に停めている様子",
     },
   ]
 
@@ -37,9 +44,17 @@ export function TrustSection() {
 
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {trustItems.map((item) => (
-            <div key={item.title} className="group">
+            <div key={item.title} className="group flex flex-col">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg mb-5">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <item.icon
-                className="w-6 h-6 text-[hsl(var(--warm-white))]/40 mb-6"
+                className="w-6 h-6 text-[hsl(var(--warm-white))]/40 mb-4"
                 strokeWidth={1.5}
               />
               <h3 className="text-sm font-medium text-[hsl(var(--warm-white))] mb-3">
