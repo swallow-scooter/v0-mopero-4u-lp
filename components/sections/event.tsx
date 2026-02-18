@@ -3,7 +3,7 @@
 export function EventSection() {
   const events = [
     {
-      location: "横浜試乗会",
+      location: "横浜メディア発表会・試乗会",
       date: "2026年3月15日（日）",
       venue: "横浜赤レンガ倉庫前広場",
       reservations: 32,
