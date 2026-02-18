@@ -1,21 +1,24 @@
-import { ArrowRight } from "lucide-react"
+import { Store, Truck, Wrench } from "lucide-react"
+
+const repairOptions = [
+  {
+    icon: Store,
+    title: "購入店で修理",
+    note: "※一部修理できない店舗もございます",
+  },
+  {
+    icon: Truck,
+    title: "配送修理",
+    note: "※送料がかかります",
+  },
+  {
+    icon: Wrench,
+    title: "出張修理",
+    note: "※出張料がかかります",
+  },
+]
 
 export function RepairSection() {
-  const repairSteps = [
-    {
-      title: "販売店へ相談",
-      description: "お近くの取扱販売店にご連絡ください。症状を確認し、最適な方法をご案内します。",
-    },
-    {
-      title: "メーカー修理",
-      description: "販売店で対応できない場合は、SWALLOWの修理センターで専門スタッフが対応します。",
-    },
-    {
-      title: "発送修理",
-      description: "お近くに販売店がない場合も安心。発送での修理対応も受け付けています。",
-    },
-  ]
-
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="max-w-4xl mx-auto px-6">
@@ -25,29 +28,30 @@ export function RepairSection() {
         <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
           壊れたら、どこで修理できるの？
         </h2>
-        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-16 max-w-lg">
+        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-12 max-w-lg">
           購入後も安心してお使いいただけるよう、複数の修理ルートをご用意しています。
         </p>
 
-        <div className="flex flex-col md:flex-row items-stretch gap-4">
-          {repairSteps.map((step, index) => (
-            <div key={step.title} className="flex-1 flex items-stretch">
-              <div className="flex-1 bg-[hsl(var(--warm-white))] p-8 flex flex-col">
-                <span className="text-xs text-[hsl(var(--soft-brown))] tracking-wider uppercase mb-4">
-                  {`Step ${index + 1}`}
-                </span>
-                <h3 className="font-serif text-lg text-foreground mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-              {index < repairSteps.length - 1 && (
-                <div className="hidden md:flex items-center px-2">
-                  <ArrowRight className="w-4 h-4 text-[hsl(var(--soft-brown))]/40" strokeWidth={1.5} />
-                </div>
-              )}
+        <p className="font-serif text-lg md:text-xl text-foreground leading-tight mb-8">
+          安心の3段構え!
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {repairOptions.map((option) => (
+            <div
+              key={option.title}
+              className="bg-[hsl(var(--warm-white))] rounded-lg p-8 flex flex-col items-center text-center"
+            >
+              <option.icon
+                className="w-8 h-8 text-foreground/30 mb-5"
+                strokeWidth={1.5}
+              />
+              <h3 className="font-serif text-base md:text-lg text-foreground mb-2">
+                {option.title}
+              </h3>
+              <p className="text-xs text-[hsl(var(--soft-brown))] leading-relaxed">
+                {option.note}
+              </p>
             </div>
           ))}
         </div>
