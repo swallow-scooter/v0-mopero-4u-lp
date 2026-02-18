@@ -69,7 +69,7 @@ export function Header() {
                 : "bg-[hsl(var(--warm-white))] text-[hsl(var(--charcoal))] hover:bg-[hsl(var(--warm-beige))]"
             }`}
           >
-            購入する
+            公式LINE登録でお知らせを受ける
           </a>
         </nav>
 
@@ -104,7 +104,7 @@ export function Header() {
             onClick={() => setMenuOpen(false)}
             className="block w-full text-center px-5 py-3 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide"
           >
-            購入する
+            公式LINE登録でお知らせを受ける
           </a>
         </div>
       )}
