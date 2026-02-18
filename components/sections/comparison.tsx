@@ -13,14 +13,14 @@ export function ComparisonSection() {
     <section className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
       <div className="max-w-4xl mx-auto px-6">
         <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          Comparison
+          特定小型原動機付自転車とは
         </p>
         <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
           自転車と、ほとんど同じです。
         </h2>
         <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-12 max-w-lg">
-          特定小型原付は、新しい乗り物ではありません。
-          自転車の延長線上にある、もうひとつの選択肢です。
+          特定小型原動機付自転車は、16歳以上なら免許不要で乗れる新しいカテゴリーの乗り物です。
+          自転車に近いルールで、もっとラクに移動できます。
         </p>
 
         <div className="overflow-x-auto -mx-6 px-6">
