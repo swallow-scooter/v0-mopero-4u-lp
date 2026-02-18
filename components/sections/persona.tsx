@@ -24,7 +24,7 @@ export function PersonaSection() {
     <section className="py-20 md:py-32 bg-background">
       <div className="max-w-5xl mx-auto px-6">
         <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          Stories
+          Interview
         </p>
         <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-16">
           毎日が、すこし変わった人たち。
