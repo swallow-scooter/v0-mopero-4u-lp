@@ -1,28 +1,40 @@
 import Image from "next/image"
 
-export function PersonaSection() {
-  const personas = [
-    {
-      name: "田中さん（62歳）",
-      image: "/images/persona-male.jpg",
-      alt: "60代男性がMOPERO 4Uに乗っている様子",
-      quote: "坂の多い街でも、買い物がおっくうじゃなくなった。",
-      story:
-        "定年後、車を手放した田中さん。近所のスーパーまでの坂道が億劫で、出かける回数が減っていた。MOPERO 4Uを使い始めてからは、毎日のように外に出るようになった。「こがなくていい」という安心感が、行動範囲を広げてくれた。",
-    },
-    {
-      name: "鈴木さん（55歳）",
-      image: "/images/persona-female.jpg",
-      alt: "50代女性がMOPERO 4Uで買い物に出かける様子",
-      quote: "自転車と同じ感覚で、でも全然疲れない。",
-      story:
-        "パート先まで片道3km。電動自転車を検討していたが、それでもこぐのは大変そう。免許は持っていないので原付も選べなかった。MOPERO 4Uなら免許不要で、自転車と同じ駐輪場に停められる。毎朝の通勤が楽しみになった。",
-    },
-  ]
+const interviewLines = [
+  {
+    speaker: "スタッフ",
+    text: "まず乗ってみて、よかったところって何かありますか？",
+  },
+  { speaker: "女性", text: "漕がなくていい。" },
+  {
+    speaker: "スタッフ",
+    text: "普段から自転車に乗っていたりします？",
+  },
+  { speaker: "女性", text: "すごく乗ります。" },
+  {
+    speaker: "スタッフ",
+    text: "自転車と比べて、漕がなくていいってなると、どういう使い道をしたいという意見はありますか？",
+  },
+  { speaker: "女性", text: "通勤ですね。" },
+  {
+    speaker: "スタッフ",
+    text: "通勤ですと、だいたい何分ぐらいかかりますか？",
+  },
+  { speaker: "女性", text: "自転車で15分、20分ぐらいですね。" },
+  {
+    speaker: "スタッフ",
+    text: "毎日ご苦労様です。通勤以外でも普通の自転車をお使いですか？",
+  },
+  {
+    speaker: "女性",
+    text: "もうとにかく通勤ですね。漕がなくていいのがすごく楽です。夏も自転車を漕ぐだけで暑くなるので、夏でも快適に行けるかなって思います。",
+  },
+]
 
+export function PersonaSection() {
   return (
     <section className="py-20 md:py-32 bg-background">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-3xl mx-auto px-6">
         <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
           Interview
         </p>
@@ -30,28 +42,47 @@ export function PersonaSection() {
           体験された方の声
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-          {personas.map((persona) => (
-            <div key={persona.name} className="group">
-              <div className="relative aspect-[4/3] w-full overflow-hidden mb-6">
-                <Image
-                  src={persona.image || "/placeholder.svg"}
-                  alt={persona.alt}
-                  fill
-                  className="object-cover"
-                />
+        <div>
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg mb-8">
+            <Image
+              src="/images/interview-female.jpg"
+              alt="30代女性がMOPERO 4Uを体験しインタビューに答える様子"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <p className="text-xs text-[hsl(var(--soft-brown))] tracking-wide mb-2">
+            女性インタビュー
+          </p>
+          <p className="font-serif text-sm text-foreground mb-8">
+            [女性 30代]
+          </p>
+
+          <div className="space-y-6">
+            {interviewLines.map((line, i) => (
+              <div key={i} className="flex gap-4">
+                <span
+                  className={`shrink-0 text-xs font-sans tracking-wide pt-0.5 w-16 text-right ${
+                    line.speaker === "スタッフ"
+                      ? "text-[hsl(var(--soft-brown))]"
+                      : "text-foreground font-medium"
+                  }`}
+                >
+                  {line.speaker}
+                </span>
+                <p
+                  className={`text-sm leading-relaxed ${
+                    line.speaker === "スタッフ"
+                      ? "text-[hsl(var(--soft-brown))]"
+                      : "text-foreground"
+                  }`}
+                >
+                  {line.text}
+                </p>
               </div>
-              <p className="text-xs text-[hsl(var(--soft-brown))] tracking-wide mb-2">
-                {persona.name}
-              </p>
-              <blockquote className="font-serif text-lg md:text-xl text-foreground leading-relaxed mb-4">
-                {`"${persona.quote}"`}
-              </blockquote>
-              <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed">
-                {persona.story}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
