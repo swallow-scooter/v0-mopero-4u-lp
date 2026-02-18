@@ -31,7 +31,7 @@ export function FamilySection() {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={100}>
               <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-8">
-                家族みんなで、1台を。
+                家族みんなで使える。
               </h2>
             </ScrollReveal>
             <ul className="space-y-8">
