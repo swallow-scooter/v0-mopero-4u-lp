@@ -63,11 +63,7 @@ export function Header() {
           ))}
           <a
             href="#price"
-            className={`inline-flex items-center justify-center px-5 py-2 text-xs font-medium tracking-wide transition-colors ${
-              scrolled
-                ? "bg-foreground text-[hsl(var(--warm-white))] hover:bg-foreground/90"
-                : "bg-[hsl(var(--warm-white))] text-[hsl(var(--charcoal))] hover:bg-[hsl(var(--warm-beige))]"
-            }`}
+            className="inline-flex items-center justify-center px-5 py-2 text-xs font-medium tracking-wide transition-colors bg-[#06C755] text-white hover:bg-[#05b64d]"
           >
             公式LINE登録でお知らせを受ける
           </a>
@@ -102,7 +98,7 @@ export function Header() {
           <a
             href="#price"
             onClick={() => setMenuOpen(false)}
-            className="block w-full text-center px-5 py-3 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide"
+            className="block w-full text-center px-5 py-3 bg-[#06C755] text-white text-sm font-medium tracking-wide hover:bg-[#05b64d] transition-colors"
           >
             公式LINE登録でお知らせを受ける
           </a>

@@ -38,7 +38,7 @@ export function PriceSection() {
           </p>
           <a
             href="#"
-            className="inline-flex items-center justify-center w-full px-8 py-4 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors"
+            className="inline-flex items-center justify-center w-full px-8 py-4 bg-[#06C755] text-white text-sm font-medium tracking-wide hover:bg-[#05b64d] transition-colors"
           >
             公式LINE登録でお知らせを受ける
           </a>

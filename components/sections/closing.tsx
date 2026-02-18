@@ -28,7 +28,7 @@ export function ClosingSection() {
           </a>
           <a
             href="#price"
-            className="inline-flex items-center justify-center px-8 py-4 border border-[hsl(var(--warm-white))]/30 text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-[hsl(var(--warm-white))]/10 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-[#06C755] text-white text-sm font-medium tracking-wide hover:bg-[#05b64d] transition-colors"
           >
             公式LINE登録でお知らせを受ける
           </a>
