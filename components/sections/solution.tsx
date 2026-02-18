@@ -26,9 +26,9 @@ export function SolutionSection() {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={200}>
               <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-6">
-                だから、
+                そんなあなたのために、
                 <br />
-                この形になりました。
+                作りました。
               </h2>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={300}>
