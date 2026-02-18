@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function EmpathySection() {
   const concerns = [
     "坂道がつらくなってきた",
@@ -10,6 +12,15 @@ export function EmpathySection() {
   return (
     <section className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
       <div className="max-w-3xl mx-auto px-6">
+        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg mb-10">
+          <Image
+            src="/images/empathy-uphill.jpg"
+            alt="坂道を自転車で上る女性の後ろ姿"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
           こんな悩み、ありませんか？
         </p>
