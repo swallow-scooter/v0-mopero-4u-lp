@@ -4,16 +4,22 @@ const repairOptions = [
   {
     icon: Store,
     title: "購入店で修理",
+    description:
+      "お買い求めいただいた販売店にお持ち込みいただければ、その場で点検・修理いたします。パーツ交換や軽微な不具合にも迅速に対応できます。",
     note: "※一部修理できない店舗もございます",
   },
   {
     icon: Truck,
     title: "配送修理",
+    description:
+      "お近くに販売店がない場合でも、配送にてお預かりし修理いたします。梱包・発送の手順もサポートスタッフが丁寧にご案内します。",
     note: "※送料がかかります",
   },
   {
     icon: Wrench,
     title: "出張修理",
+    description:
+      "ご自宅までスタッフが訪問し、その場で修理対応いたします。車体を運ぶ手間がなく、お忙しい方やご高齢の方にも安心のサービスです。",
     note: "※出張料がかかります",
   },
 ]
@@ -46,10 +52,13 @@ export function RepairSection() {
                 className="w-8 h-8 text-foreground/30 mb-5"
                 strokeWidth={1.5}
               />
-              <h3 className="font-serif text-base md:text-lg text-foreground mb-2">
+              <h3 className="font-serif text-base md:text-lg text-foreground mb-3">
                 {option.title}
               </h3>
-              <p className="text-xs text-[hsl(var(--soft-brown))] leading-relaxed">
+              <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-3">
+                {option.description}
+              </p>
+              <p className="text-xs text-[hsl(var(--soft-brown))]/70 leading-relaxed">
                 {option.note}
               </p>
             </div>
