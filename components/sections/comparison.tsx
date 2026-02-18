@@ -1,3 +1,26 @@
+import Image from "next/image"
+
+const features = [
+  {
+    title: "こがずにスイスイ",
+    description: "電気のみで動くからスロットルを回すだけでこがずに走れる",
+    image: "/images/feature-throttle.jpg",
+    alt: "スロットルグリップの接写",
+  },
+  {
+    title: "自転車よりコンパクト",
+    description: "扱いやすく手軽に乗れる",
+    image: "/images/feature-compact.jpg",
+    alt: "子乗せ自転車との大きさ比較",
+  },
+  {
+    title: "家族みんなで使える",
+    description: "免許不要で運転できる（16歳以上※）",
+    image: "/images/feature-family.jpg",
+    alt: "家族で使えるイメージ",
+  },
+]
+
 export function ComparisonSection() {
   const rows = [
     { label: "免許", bicycle: "不要", mopero: "不要", scooter: "必要" },
@@ -18,10 +41,38 @@ export function ComparisonSection() {
         <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
           自転車と、ほとんど同じです。
         </h2>
-        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-12 max-w-lg">
+        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-6 max-w-lg">
           特定小型原動機付自転車は、16歳以上なら免許不要で乗れる新しいカテゴリーの乗り物です。
           自転車に近いルールで、もっとラクに移動できます。
         </p>
+
+        <p className="font-serif text-lg md:text-xl text-foreground leading-tight mb-2">
+          自転車みたいに乗れて、もっとラクチン
+        </p>
+        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-10 max-w-lg">
+          気軽に移動できる新しいモビリティの選択肢
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {features.map((feature) => (
+            <div key={feature.title} className="flex flex-col">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg mb-4">
+                <Image
+                  src={feature.image}
+                  alt={feature.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="font-serif text-base md:text-lg text-foreground mb-1">
+                {feature.title}
+              </h3>
+              <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
 
         <div className="overflow-x-auto -mx-6 px-6">
           <table className="w-full min-w-[500px]">
