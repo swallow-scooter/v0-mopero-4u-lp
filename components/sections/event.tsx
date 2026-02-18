@@ -50,23 +50,12 @@ export function EventSection() {
                   {event.date} / {event.venue}
                 </p>
               </div>
-              <div className="flex items-center gap-6">
-                <div className="text-right">
-                  <span className="block text-xs text-[hsl(var(--soft-brown))]">
-                    予約数
-                  </span>
-                  <span className="text-lg font-medium text-foreground tabular-nums">
-                    {event.reservations}
-                    <span className="text-sm font-normal text-[hsl(var(--soft-brown))]">名</span>
-                  </span>
-                </div>
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors shrink-0"
-                >
-                  予約する
-                </a>
-              </div>
+              <a
+                href="#"
+                className="inline-flex items-center justify-center px-6 py-3 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors shrink-0"
+              >
+                予約する
+              </a>
             </div>
           ))}
         </div>
