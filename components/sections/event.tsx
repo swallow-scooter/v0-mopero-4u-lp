@@ -1,0 +1,76 @@
+"use client"
+
+export function EventSection() {
+  const events = [
+    {
+      location: "横浜試乗会",
+      date: "2026年3月15日（日）",
+      venue: "横浜赤レンガ倉庫前広場",
+      reservations: 32,
+    },
+    {
+      location: "東京展示会",
+      date: "2026年3月22日（土）",
+      venue: "東京ビッグサイト 西ホール",
+      reservations: 18,
+    },
+    {
+      location: "関西試乗会",
+      date: "2026年4月5日（土）",
+      venue: "大阪城公園 太陽の広場",
+      reservations: 11,
+    },
+  ]
+
+  return (
+    <section id="trial" className="py-20 md:py-32 bg-background">
+      <div className="max-w-4xl mx-auto px-6">
+        <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+          Trial Event
+        </p>
+        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
+          まずは、乗ってみてください。
+        </h2>
+        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-16 max-w-lg">
+          全国各地で試乗会・展示会を開催しています。
+          実際に触って、乗って、確かめてください。
+        </p>
+
+        <div className="space-y-4">
+          {events.map((event) => (
+            <div
+              key={event.location}
+              className="bg-[hsl(var(--warm-white))] p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 justify-between"
+            >
+              <div className="flex-1">
+                <h3 className="font-serif text-lg text-foreground mb-1">
+                  {event.location}
+                </h3>
+                <p className="text-sm text-[hsl(var(--soft-brown))]">
+                  {event.date} / {event.venue}
+                </p>
+              </div>
+              <div className="flex items-center gap-6">
+                <div className="text-right">
+                  <span className="block text-xs text-[hsl(var(--soft-brown))]">
+                    予約数
+                  </span>
+                  <span className="text-lg font-medium text-foreground tabular-nums">
+                    {event.reservations}
+                    <span className="text-sm font-normal text-[hsl(var(--soft-brown))]">名</span>
+                  </span>
+                </div>
+                <a
+                  href="#"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors shrink-0"
+                >
+                  予約する
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,44 @@
+import Image from "next/image"
+
+export function SolutionSection() {
+  return (
+    <section className="py-20 md:py-32 bg-background">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div className="relative aspect-[4/5] w-full overflow-hidden">
+            <Image
+              src="/images/product-side.jpg"
+              alt="MOPERO 4U 製品写真"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+              Solution
+            </p>
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-6">
+              だから、
+              <br />
+              この形になりました。
+            </h2>
+            <div className="space-y-4 text-[hsl(var(--soft-brown))] text-sm leading-relaxed">
+              <p>
+                MOPERO 4Uは、電動自転車でもバイクでもありません。
+                自転車と同じ感覚で使えて、こがずに走れる。
+              </p>
+              <p>
+                免許不要。16歳以上なら誰でも。
+                ペダルの代わりに、アクセルをひねるだけ。
+              </p>
+              <p>
+                見た目も、サイズも、置き場所も。
+                自転車のある暮らしの延長線上にあります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

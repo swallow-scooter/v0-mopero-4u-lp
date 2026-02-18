@@ -1,0 +1,49 @@
+"use client"
+
+import Image from "next/image"
+
+export function HeroSection() {
+  return (
+    <section className="relative min-h-[90vh] flex items-end pb-16 md:pb-24">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-lifestyle.jpg"
+          alt="MOPERO 4Uのある暮らし"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(30,10%,18%)] via-[hsl(30,10%,18%)]/40 to-transparent" />
+      </div>
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6">
+        <p className="text-[hsl(var(--warm-white))]/80 text-sm tracking-widest uppercase mb-4 font-sans font-light">
+          SWALLOW / MOPERO 4U
+        </p>
+        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-[hsl(var(--warm-white))] leading-tight tracking-tight text-balance mb-6">
+          {'あなたの次の'}
+          <br />
+          {'"こがない"自転車。'}
+        </h1>
+        <p className="text-[hsl(var(--warm-white))]/70 text-base md:text-lg max-w-md leading-relaxed mb-10 font-light">
+          こがずに走る。免許もいらない。
+          <br />
+          暮らしに静かになじむ、特定小型原付。
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#trial"
+            className="inline-flex items-center justify-center px-8 py-4 bg-[hsl(var(--warm-white))] text-[hsl(var(--charcoal))] text-sm font-medium tracking-wide hover:bg-[hsl(var(--warm-beige))] transition-colors"
+          >
+            試乗予約する
+          </a>
+          <a
+            href="#price"
+            className="inline-flex items-center justify-center px-8 py-4 border border-[hsl(var(--warm-white))]/30 text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-[hsl(var(--warm-white))]/10 transition-colors"
+          >
+            価格を見る
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
