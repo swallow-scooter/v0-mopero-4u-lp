@@ -83,16 +83,6 @@ export function BenefitsSection() {
           </p>
         </ScrollReveal>
 
-        {/* Product photo */}
-        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg mb-16">
-          <Image
-            src="/images/merit-product.jpg"
-            alt="MOPERO 4U サイドビュー - 各特徴ポイント"
-            fill
-            className="object-contain bg-[hsl(var(--warm-white))]"
-          />
-        </div>
-
         {/* Feature list */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {merits.map((item) => (
