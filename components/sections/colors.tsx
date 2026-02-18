@@ -26,10 +26,10 @@ const colorOptions = [
     featured: false,
   },
   {
-    name: "チェレステ",
-    nameEn: "Celeste",
-    hex: "#76b5a0",
-    image: "/images/color-celeste.jpg",
+    name: "オリーブ",
+    nameEn: "Olive",
+    hex: "#6b7c4e",
+    image: "/images/color-olive.jpg",
     featured: false,
   },
 ]
