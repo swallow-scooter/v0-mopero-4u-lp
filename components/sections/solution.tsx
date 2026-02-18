@@ -5,12 +5,12 @@ export function SolutionSection() {
     <section className="py-20 md:py-32 bg-background">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="relative aspect-[4/5] w-full overflow-hidden">
+          <div className="relative aspect-[4/3] w-full">
             <Image
               src="/images/product-side.jpg"
               alt="MOPERO 4U 製品写真"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
           <div>
