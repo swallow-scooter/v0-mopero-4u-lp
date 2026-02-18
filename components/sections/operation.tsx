@@ -1,19 +1,27 @@
+import Image from "next/image"
+
 export function OperationSection() {
   const steps = [
     {
       number: "01",
       title: "ロックを外す",
       description: "鍵を回して、サークル錠を解除するだけ。自転車と同じ操作です。",
+      image: "/images/step-01-unlock.jpg",
+      alt: "サークル錠を鍵で解除する様子",
     },
     {
       number: "02",
       title: "スタンドを外す",
       description: "軽量設計のスタンドを足で軽く蹴り上げるだけ。力は要りません。",
+      image: "/images/step-02-stand.jpg",
+      alt: "スタンドを足で蹴り上げる様子",
     },
     {
       number: "03",
       title: "アクセルをひねる",
       description: "右手のグリップをゆっくりひねれば、静かに走り出します。",
+      image: "/images/step-03-throttle.jpg",
+      alt: "スロットルグリップをひねる様子",
     },
   ]
 
@@ -32,10 +40,18 @@ export function OperationSection() {
 
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {steps.map((step) => (
-            <div key={step.number} className="relative">
-              <span className="block text-5xl md:text-6xl font-serif text-foreground/10 mb-4">
-                {step.number}
-              </span>
+            <div key={step.number} className="relative flex flex-col">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg mb-5">
+                <Image
+                  src={step.image}
+                  alt={step.alt}
+                  fill
+                  className="object-cover"
+                />
+                <span className="absolute top-3 left-3 font-serif text-xs text-[hsl(var(--warm-white))] bg-foreground/60 px-2 py-0.5 rounded">
+                  {step.number}
+                </span>
+              </div>
               <h3 className="font-serif text-lg text-foreground mb-3">
                 {step.title}
               </h3>
