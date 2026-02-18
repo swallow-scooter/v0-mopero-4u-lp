@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function OperationSection() {
   const steps = [
@@ -28,15 +31,21 @@ export function OperationSection() {
   return (
     <section className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
       <div className="max-w-4xl mx-auto px-6">
-        <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          How to Use
-        </p>
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
-          操作は、たった3ステップ。
-        </h2>
-        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-16 max-w-lg">
-          特別な技術は必要ありません。自転車に乗れる方なら、すぐに使えます。
-        </p>
+        <ScrollReveal direction="up">
+          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+            How to Use
+          </p>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={100}>
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
+            操作は、たった3ステップ。
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={200}>
+          <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-16 max-w-lg">
+            特別な技術は必要ありません。自転車に乗れる方なら、すぐに使えます。
+          </p>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {steps.map((step) => (

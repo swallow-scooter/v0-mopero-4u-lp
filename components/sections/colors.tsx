@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 const colorOptions = [
   {
@@ -41,12 +42,16 @@ export function ColorsSection() {
   return (
     <section className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
       <div className="max-w-5xl mx-auto px-6">
-        <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          Colors
-        </p>
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-16">
-          暮らしに馴染む、4つの色。
-        </h2>
+        <ScrollReveal direction="up">
+          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+            Colors
+          </p>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={100}>
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-16">
+            暮らしに馴染む、4つの色。
+          </h2>
+        </ScrollReveal>
 
         <div className="relative aspect-[16/9] w-full overflow-hidden mb-8 bg-[hsl(var(--warm-beige))]">
           <Image

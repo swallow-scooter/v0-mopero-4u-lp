@@ -1,16 +1,24 @@
+"use client"
+
+import { ScrollReveal } from "@/components/scroll-reveal"
+
 export function ClosingSection() {
   return (
     <section className="py-24 md:py-40 bg-[hsl(var(--charcoal))]">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[hsl(var(--warm-white))] leading-tight tracking-tight text-balance mb-6">
-          変わらなくていい。
-          <br />
-          楽になるだけでいい。
-        </h2>
-        <p className="text-[hsl(var(--warm-white))]/50 text-sm leading-relaxed max-w-md mx-auto mb-12">
-          MOPERO 4Uは、あなたの暮らしを変えるものではありません。
-          今の暮らしを、すこしだけ楽にするものです。
-        </p>
+        <ScrollReveal direction="up" duration={900}>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[hsl(var(--warm-white))] leading-tight tracking-tight text-balance mb-6">
+            変わらなくていい。
+            <br />
+            楽になるだけでいい。
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={200} duration={900}>
+          <p className="text-[hsl(var(--warm-white))]/50 text-sm leading-relaxed max-w-md mx-auto mb-12">
+            MOPERO 4Uは、あなたの暮らしを変えるものではありません。
+            今の暮らしを、すこしだけ楽にするものです。
+          </p>
+        </ScrollReveal>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#trial"

@@ -1,3 +1,7 @@
+"use client"
+
+import { ScrollReveal } from "@/components/scroll-reveal"
+
 export function GuaranteeSection() {
   const guarantees = [
     {
@@ -23,12 +27,16 @@ export function GuaranteeSection() {
   return (
     <section className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
       <div className="max-w-5xl mx-auto px-6">
-        <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          Guarantee
-        </p>
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-16">
-          3つの保証で、購入後も安心。
-        </h2>
+        <ScrollReveal direction="up">
+          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+            Guarantee
+          </p>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={100}>
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-16">
+            3つの保証で、購入後も安心。
+          </h2>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-3 gap-6">
           {guarantees.map((g) => (

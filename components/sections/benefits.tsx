@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 const merits = [
   {
@@ -63,16 +66,22 @@ export function BenefitsSection() {
   return (
     <section className="py-20 md:py-32 bg-[hsl(var(--warm-beige))]">
       <div className="max-w-4xl mx-auto px-6">
-        <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          Merit
-        </p>
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-6">
-          自転車のいいとこを残してもっと便利に
-        </h2>
-        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-12 max-w-lg">
-          MOPERO 4U は毎日の暮らしに寄り添うために、
-          細部までこだわり抜いた設計です。
-        </p>
+        <ScrollReveal direction="up">
+          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+            Merit
+          </p>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={100}>
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-6">
+            自転車のいいとこを残してもっと便利に
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={200}>
+          <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-12 max-w-lg">
+            MOPERO 4U は毎日の暮らしに寄り添うために、
+            細部までこだわり抜いた設計です。
+          </p>
+        </ScrollReveal>
 
         {/* Product photo */}
         <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg mb-16">

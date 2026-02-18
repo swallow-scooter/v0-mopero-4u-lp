@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 const features = [
   {
@@ -35,23 +38,31 @@ export function ComparisonSection() {
   return (
     <section className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
       <div className="max-w-4xl mx-auto px-6">
-        <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          特定小型原動機付自転車とは
-        </p>
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
-          自転車の使いやすさのまま、便利さをプラス
-        </h2>
-        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-6 max-w-lg">
-          特定小型原動機付自転車は、16歳以上なら免許不要で乗れる新しいカテゴリーの乗り物です。
-          自転車に近いルールで、もっとラクに移動できます。
-        </p>
+        <ScrollReveal direction="up">
+          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+            特定小型原動機付自転車とは
+          </p>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={100}>
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
+            自転車の使いやすさのまま、便利さをプラス
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={200}>
+          <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-6 max-w-lg">
+            特定小型原動機付自転車は、16歳以上なら免許不要で乗れる新しいカテゴリーの乗り物です。
+            自転車に近いルールで、もっとラクに移動できます。
+          </p>
+        </ScrollReveal>
 
-        <p className="font-serif text-lg md:text-xl text-foreground leading-tight mb-2">
-          自転車みたいに乗れて、もっとラクチン
-        </p>
-        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-10 max-w-lg">
-          気軽に移動できる新しいモビリティの選択肢
-        </p>
+        <ScrollReveal direction="up" delay={250}>
+          <p className="font-serif text-lg md:text-xl text-foreground leading-tight mb-2">
+            自転車みたいに乗れて、もっとラクチン
+          </p>
+          <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-10 max-w-lg">
+            気軽に移動できる新しいモビリティの選択肢
+          </p>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {features.map((feature) => (

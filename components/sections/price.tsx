@@ -1,13 +1,21 @@
+"use client"
+
+import { ScrollReveal } from "@/components/scroll-reveal"
+
 export function PriceSection() {
   return (
     <section id="price" className="py-20 md:py-32 bg-background">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          Price
-        </p>
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-10">
-          特別価格でお届けします。
-        </h2>
+        <ScrollReveal direction="up">
+          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+            Price
+          </p>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={100}>
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-10">
+            特別価格でお届けします。
+          </h2>
+        </ScrollReveal>
 
         <div className="bg-[hsl(var(--warm-white))] p-8 md:p-12 inline-block w-full max-w-md">
           <p className="text-sm text-[hsl(var(--soft-brown))] mb-2">

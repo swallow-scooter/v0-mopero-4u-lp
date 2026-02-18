@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 const interviewLines = [
   {
@@ -35,12 +38,16 @@ export function PersonaSection() {
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="max-w-3xl mx-auto px-6">
-        <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          Interview
-        </p>
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-16">
-          体験された方の声
-        </h2>
+        <ScrollReveal direction="up">
+          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+            Interview
+          </p>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={100}>
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-16">
+            体験された方の声
+          </h2>
+        </ScrollReveal>
 
         <div>
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg mb-8">

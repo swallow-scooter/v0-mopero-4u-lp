@@ -1,4 +1,7 @@
+"use client"
+
 import { Store, Truck, Wrench } from "lucide-react"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 const repairOptions = [
   {
@@ -28,19 +31,27 @@ export function RepairSection() {
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="max-w-4xl mx-auto px-6">
-        <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          Repair Support
-        </p>
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
-          壊れたら、どこで修理できるの？
-        </h2>
-        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-12 max-w-lg">
-          購入後も安心してお使いいただけるよう、複数の修理ルートをご用意しています。
-        </p>
+        <ScrollReveal direction="up">
+          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+            Repair Support
+          </p>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={100}>
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
+            壊れたら、どこで修理できるの？
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={200}>
+          <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-12 max-w-lg">
+            購入後も安心してお使いいただけるよう、複数の修理ルートをご用意しています。
+          </p>
+        </ScrollReveal>
 
-        <p className="font-serif text-lg md:text-xl text-foreground leading-tight mb-8">
-          安心の3段構え!
-        </p>
+        <ScrollReveal direction="up" delay={250}>
+          <p className="font-serif text-lg md:text-xl text-foreground leading-tight mb-8">
+            安心の3段構え!
+          </p>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {repairOptions.map((option) => (

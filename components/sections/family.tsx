@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function FamilySection() {
   const features = [
@@ -21,12 +24,16 @@ export function FamilySection() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div>
-            <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-              Family Share
-            </p>
-            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-8">
-              家族みんなで、1台を。
-            </h2>
+            <ScrollReveal direction="up">
+              <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+                Family Share
+              </p>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={100}>
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-8">
+                家族みんなで、1台を。
+              </h2>
+            </ScrollReveal>
             <ul className="space-y-8">
               {features.map((feature) => (
                 <li key={feature.title}>

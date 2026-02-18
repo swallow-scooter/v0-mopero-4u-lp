@@ -1,5 +1,7 @@
 "use client"
 
+import { ScrollReveal } from "@/components/scroll-reveal"
+
 export function EventSection() {
   const events = [
     {
@@ -25,16 +27,22 @@ export function EventSection() {
   return (
     <section id="trial" className="py-20 md:py-32 bg-background">
       <div className="max-w-4xl mx-auto px-6">
-        <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-          Trial Event
-        </p>
-        <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
-          まずは、乗ってみてください。
-        </h2>
-        <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-16 max-w-lg">
-          全国各地で試乗会・展示会を開催しています。
-          実際に触って、乗って、確かめてください。
-        </p>
+        <ScrollReveal direction="up">
+          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+            Trial Event
+          </p>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={100}>
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
+            まずは、乗ってみてください。
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={200}>
+          <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-16 max-w-lg">
+            全国各地で試乗会・展示会を開催しています。
+            実際に触って、乗って、確かめてください。
+          </p>
+        </ScrollReveal>
 
         <div className="space-y-4">
           {events.map((event) => (
