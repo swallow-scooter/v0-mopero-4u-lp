@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/sections/hero"
 import { EmpathySection } from "@/components/sections/empathy"
 import { SolutionSection } from "@/components/sections/solution"
 import { ComparisonSection } from "@/components/sections/comparison"
+import { BenefitsSection } from "@/components/sections/benefits"
 import { PersonaSection } from "@/components/sections/persona"
 import { OperationSection } from "@/components/sections/operation"
 import { FamilySection } from "@/components/sections/family"
@@ -31,6 +32,8 @@ export default function Page() {
         <div id="features">
           <ComparisonSection />
         </div>
+        {/* 4.5 Benefits */}
+        <BenefitsSection />
         {/* 5. Persona */}
         <PersonaSection />
         {/* 6. Operation */}
