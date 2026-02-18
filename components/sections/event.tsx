@@ -50,12 +50,7 @@ export function EventSection() {
                   {event.date} / {event.venue}
                 </p>
               </div>
-              <a
-                href="#"
-                className="inline-flex items-center justify-center px-6 py-3 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors shrink-0"
-              >
-                予約する
-              </a>
+
             </div>
           ))}
         </div>
