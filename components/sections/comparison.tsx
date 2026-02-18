@@ -39,7 +39,7 @@ export function ComparisonSection() {
           特定小型原動機付自転車とは
         </p>
         <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
-          自転車と、ほとんど同じです。
+          自転車の使いやすさのまま、便利さをプラス
         </h2>
         <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-6 max-w-lg">
           特定小型原動機付自転車は、16歳以上なら免許不要で乗れる新しいカテゴリーの乗り物です。
