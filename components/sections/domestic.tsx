@@ -10,7 +10,7 @@ export function DomesticSection() {
               Made by SWALLOW
             </p>
             <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-6">
-              国内企画・開発。
+              国内企画・開発・サポート。
               <br />
               日本の道路のために。
             </h2>
