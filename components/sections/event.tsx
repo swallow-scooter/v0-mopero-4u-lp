@@ -34,7 +34,7 @@ export function EventSection() {
         </ScrollReveal>
         <ScrollReveal direction="up" delay={100}>
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
-            まずは、乗ってみてください。
+            まずは、体験してみてください。
           </h2>
         </ScrollReveal>
         <ScrollReveal direction="up" delay={200}>
