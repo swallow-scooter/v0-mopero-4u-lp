@@ -27,7 +27,7 @@ export function PersonaSection() {
           Interview
         </p>
         <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-16">
-          毎日が、すこし変わった人たち。
+          体験された方の声
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
