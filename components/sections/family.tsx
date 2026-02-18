@@ -40,13 +40,42 @@ export function FamilySection() {
               ))}
             </ul>
           </div>
-          <div className="relative aspect-[4/5] w-full overflow-hidden">
-            <Image
-              src="/images/family-use.jpg"
-              alt="家族でMOPERO 4Uを共有する様子"
-              fill
-              className="object-cover"
-            />
+          <div className="flex flex-col gap-4">
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg">
+              <Image
+                src="/images/family-commute.jpg"
+                alt="MOPERO 4Uで通勤するイメージ"
+                fill
+                className="object-cover"
+              />
+              <span className="absolute bottom-3 left-3 text-xs text-[hsl(var(--warm-white))] bg-foreground/60 px-2 py-0.5 rounded font-sans">
+                通勤に
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+                <Image
+                  src="/images/family-shopping.jpg"
+                  alt="MOPERO 4Uで買い物するイメージ"
+                  fill
+                  className="object-cover"
+                />
+                <span className="absolute bottom-3 left-3 text-xs text-[hsl(var(--warm-white))] bg-foreground/60 px-2 py-0.5 rounded font-sans">
+                  買い物に
+                </span>
+              </div>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+                <Image
+                  src="/images/family-school.jpg"
+                  alt="MOPERO 4Uで通学するイメージ"
+                  fill
+                  className="object-cover"
+                />
+                <span className="absolute bottom-3 left-3 text-xs text-[hsl(var(--warm-white))] bg-foreground/60 px-2 py-0.5 rounded font-sans">
+                  通学に
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
