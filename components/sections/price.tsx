@@ -24,10 +24,10 @@ export function PriceSection() {
 
         <div className="bg-[hsl(var(--warm-white))] p-8 md:p-12 inline-block w-full max-w-md">
           <p className="text-sm text-[hsl(var(--soft-brown))] mb-2">
-            メーカー希望小売価格
+            通常価格
           </p>
           <p className="text-lg text-[hsl(var(--soft-brown))] line-through mb-4">
-            {'¥198,000（税込）'}
+            {'¥189,800（税込）'}
           </p>
           <div className="flex items-baseline justify-center gap-3 mb-2">
             <span className="inline-block px-3 py-1 bg-[hsl(var(--highlight))] text-[hsl(var(--warm-white))] text-xs font-medium tracking-wider">
@@ -35,7 +35,7 @@ export function PriceSection() {
             </span>
           </div>
           <p className="text-4xl md:text-5xl font-serif text-foreground mt-4 mb-2">
-            {'¥108,900'}
+            {'¥104,390'}
             <span className="text-lg font-sans text-[hsl(var(--soft-brown))]">（税込）</span>
           </p>
           <p className="text-xs text-[hsl(var(--soft-brown))] mb-8">
