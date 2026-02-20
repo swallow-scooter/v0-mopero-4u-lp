@@ -16,7 +16,7 @@ export function EventSection() {
       date: "2026年3月29日（土）",
       venue: "ジェイアール東日本都市開発 高架下空き倉庫",
       reservations: 18,
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=高円寺+高架下+東京",
+      mapUrl: "https://www.google.com/maps/place/%E9%AB%98%E6%9E%B6%E4%B8%8B%E7%A9%BA%E3%81%8D%E5%80%89%E5%BA%AB/@35.7051741,139.6424888,17z/data=!3m1!4b1!4m6!3m5!1s0x6018f3718f6cc11b:0x313a4a9b7d97b498!8m2!3d35.7051741!4d139.6446114!16s%2Fg%2F11spzn3492?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D",
     },
     {
       location: "ビックカメラ新宿西口店 試乗会",
