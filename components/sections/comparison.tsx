@@ -32,7 +32,6 @@ export function ComparisonSection() {
     { label: "駐輪場", bicycle: "利用可", mopero: "利用可", scooter: "利用不可が多い" },
     { label: "走行場所", bicycle: "車道・自転車道", mopero: "車道・自転車道", scooter: "車道" },
     { label: "最高速度", bicycle: "制限なし", mopero: "20km/h", scooter: "30km/h" },
-    { label: "維持費", bicycle: "ほぼなし", mopero: "自賠責のみ", scooter: "自賠責+任意" },
   ]
 
   return (
