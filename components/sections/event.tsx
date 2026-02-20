@@ -9,54 +9,63 @@ export function EventSection() {
       date: "2026年3月13日（金）",
       venue: "テックハブヨコハマ",
       reservations: 32,
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=テックハブヨコハマ+横浜",
     },
     {
       location: "東京（高円寺）試乗会",
       date: "2026年3月29日（土）",
       venue: "ジェイアール東日本都市開発 高架下空き倉庫",
       reservations: 18,
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=高円寺+高架下+東京",
     },
     {
       location: "ビックカメラ新宿西口店 試乗会",
       date: "2026年3月14日（土）",
       venue: "",
       reservations: 0,
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=ビックカメラ新宿西口店",
     },
     {
       location: "ヨドバシカメラ梅田店 試乗会",
       date: "2026年3月14日（土）",
       venue: "",
       reservations: 0,
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=ヨドバシカメラ梅田",
     },
     {
       location: "ヨドバシカメラ京都店 試乗会",
       date: "2026年3月20日（金）・21日（土）",
       venue: "",
       reservations: 0,
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=ヨドバシカメラ京都",
     },
     {
       location: "ヨドバシカメラ新宿西口店 試乗会",
       date: "2026年3月20日（金）・21日（土）",
       venue: "",
       reservations: 0,
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=ヨドバシカメラ新宿西口",
     },
     {
       location: "ヨドバシカメラ博多店 試乗会",
       date: "2026年3月28日（土）・29日（日）",
       venue: "",
       reservations: 0,
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=ヨドバシカメラ博多",
     },
     {
       location: "ヨドバシカメラ秋葉原店 試乗会",
       date: "2026年3月28日（土）・29日（日）",
       venue: "",
       reservations: 0,
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=ヨドバシカメラ秋葉原",
     },
     {
       location: "各地家電量販店試乗会",
       date: "詳しくは公式LINEにて通知いたします。",
       venue: "",
       reservations: 0,
+      mapUrl: "",
     },
   ]
 
@@ -94,7 +103,31 @@ export function EventSection() {
                   {event.date}{event.venue ? ` / ${event.venue}` : ""}
                 </p>
               </div>
-
+              {event.mapUrl && (
+                <a
+                  href={event.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 border border-border text-sm text-foreground font-medium tracking-wide hover:bg-foreground hover:text-[hsl(var(--warm-white))] transition-colors shrink-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  開催場所マップ
+                </a>
+              )}
             </div>
           ))}
         </div>
