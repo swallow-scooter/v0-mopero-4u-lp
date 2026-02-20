@@ -39,7 +39,7 @@ export function PriceSection() {
             <span className="text-lg font-sans text-[hsl(var(--soft-brown))]">（税込）</span>
           </p>
           <p className="text-xs text-[hsl(var(--soft-brown))] mb-8">
-            送料無料 / 自賠責保険料別途
+            配送の場合には別途送料がかかります
           </p>
           <a
             href="#"
