@@ -30,7 +30,7 @@ export function ComparisonSection() {
     { label: "こぐ必要", bicycle: "あり", mopero: "なし", scooter: "なし" },
     { label: "ヘルメット", bicycle: "努力義務", mopero: "努力義務", scooter: "必須" },
     { label: "駐輪場", bicycle: "利用可", mopero: "利用可", scooter: "利用不可が多い" },
-    { label: "走行場所", bicycle: "車道・自転車道", mopero: "車道・自転車道", scooter: "車道" },
+    { label: "走行場所", bicycle: "車道・自転車道", mopero: "車道・自転車道・自転車通行可の歩道", scooter: "車道" },
     { label: "最高速度", bicycle: "制限なし", mopero: "20km/h", scooter: "30km/h" },
   ]
 
