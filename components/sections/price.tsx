@@ -12,9 +12,14 @@ export function PriceSection() {
           </p>
         </ScrollReveal>
         <ScrollReveal direction="up" delay={100}>
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-10">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
             特別価格でお届けします。
           </h2>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={150}>
+          <p className="text-sm text-[hsl(var(--highlight))] leading-relaxed mb-10">
+            特別先行予約価格でのご提供は数量限定および無くなり次第終了となります。
+          </p>
         </ScrollReveal>
 
         <div className="bg-[hsl(var(--warm-white))] p-8 md:p-12 inline-block w-full max-w-md">
