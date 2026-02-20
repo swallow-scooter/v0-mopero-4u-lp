@@ -17,6 +17,42 @@ export function EventSection() {
       reservations: 18,
     },
     {
+      location: "ビックカメラ新宿西口店",
+      date: "2026年3月14日（土）",
+      venue: "",
+      reservations: 0,
+    },
+    {
+      location: "ヨドバシカメラ梅田店",
+      date: "2026年3月14日（土）",
+      venue: "",
+      reservations: 0,
+    },
+    {
+      location: "ヨドバシカメラ京都店",
+      date: "2026年3月20日（金）・21日（土）",
+      venue: "",
+      reservations: 0,
+    },
+    {
+      location: "ヨドバシカメラ新宿西口店",
+      date: "2026年3月20日（金）・21日（土）",
+      venue: "",
+      reservations: 0,
+    },
+    {
+      location: "ヨドバシカメラ博多店",
+      date: "2026年3月28日（土）・29日（日）",
+      venue: "",
+      reservations: 0,
+    },
+    {
+      location: "ヨドバシカメラ秋葉原店",
+      date: "2026年3月28日（土）・29日（日）",
+      venue: "",
+      reservations: 0,
+    },
+    {
       location: "各地家電量販店試乗会",
       date: "詳しくは公式LINEにて通知いたします。",
       venue: "",
