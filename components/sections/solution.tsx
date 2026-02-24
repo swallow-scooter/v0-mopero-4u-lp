@@ -14,7 +14,7 @@ export function SolutionSection() {
                 src="/images/product-side.jpg"
                 alt="MOPERO 4U に乗って街を走る女性"
                 fill
-                className="object-cover scale-[1.02]"
+                className="object-cover scale-[1.6] object-[center_40%]"
               />
             </div>
           </ScrollReveal>
