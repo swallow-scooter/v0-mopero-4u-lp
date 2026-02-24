@@ -128,7 +128,10 @@ export function ComparisonSection() {
           </table>
         </div>
 
-        <div className="mt-16">
+      </div>
+
+      <div className="bg-background py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal direction="up">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
