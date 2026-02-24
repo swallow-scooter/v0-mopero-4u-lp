@@ -14,45 +14,49 @@ export function EmpathySection() {
 
   return (
     <section className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
-      <div className="max-w-3xl mx-auto px-6">
-        <ScrollReveal direction="up" duration={800}>
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl mb-10 shadow-lg ring-1 ring-border/10">
-            <Image
-              src="/images/empathy-uphill.jpg"
-              alt="坂道で自転車を押して歩く女性"
-              fill
-              className="object-cover scale-[1.02]"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--warm-white))]/20 to-transparent" />
-          </div>
-        </ScrollReveal>
-        <ScrollReveal direction="up" delay={100}>
-          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
-            こんな悩み、ありませんか？
-          </p>
-        </ScrollReveal>
-        <ul className="space-y-5">
-          {concerns.map((concern, i) => (
-            <ScrollReveal key={concern} direction="up" delay={150 + i * 80}>
-              <li className="flex items-start gap-4 text-foreground">
-                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[hsl(var(--highlight))] shrink-0" />
-                <span className="font-serif text-lg md:text-xl leading-relaxed">
-                  {concern}
-                </span>
-              </li>
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+          <ScrollReveal direction="left" duration={800}>
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg ring-1 ring-border/10">
+              <Image
+                src="/images/empathy-uphill.jpg"
+                alt="坂道で自転車を押して歩く女性"
+                fill
+                className="object-cover scale-[1.02]"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--warm-white))]/20 to-transparent" />
+            </div>
+          </ScrollReveal>
+          <div>
+            <ScrollReveal direction="up" delay={100}>
+              <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans">
+                こんな悩み、ありませんか？
+              </p>
             </ScrollReveal>
-          ))}
-        </ul>
-        <ScrollReveal direction="up" delay={200}>
-          <div className="mt-12 pt-10 border-t border-border">
-            <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed max-w-lg">
-              移動のたびに感じる、小さなストレス。
-              <br />
-              でも、それは仕方ないことだと思っていませんか。
-            </p>
+            <ul className="space-y-5">
+              {concerns.map((concern, i) => (
+                <ScrollReveal key={concern} direction="up" delay={150 + i * 80}>
+                  <li className="flex items-start gap-4 text-foreground">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[hsl(var(--highlight))] shrink-0" />
+                    <span className="font-serif text-lg md:text-xl leading-relaxed">
+                      {concern}
+                    </span>
+                  </li>
+                </ScrollReveal>
+              ))}
+            </ul>
+            <ScrollReveal direction="up" delay={200}>
+              <div className="mt-12 pt-10 border-t border-border">
+                <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed max-w-lg">
+                  移動のたびに感じる、小さなストレス。
+                  <br />
+                  でも、それは仕方ないことだと思っていませんか。
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   )
