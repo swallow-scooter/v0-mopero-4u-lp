@@ -1,19 +1,46 @@
 "use client"
 
+import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
+const slides = [
+  { src: "/images/hero-slide-1.jpg", alt: "公園のウッドデッキでMOPERO 4Uと佇む女性" },
+  { src: "/images/hero-slide-2.jpg", alt: "歩道でMOPERO 4Uに寄り添う女性" },
+  { src: "/images/hero-slide-3.jpg", alt: "ベーカリーの前でMOPERO 4Uとお買い物" },
+  { src: "/images/hero-slide-4.jpg", alt: "ヘルメットを被りMOPERO 4Uで街を走る女性" },
+]
+
 export function HeroSection() {
+  const [current, setCurrent] = useState(0)
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % slides.length)
+  }, [])
+
+  useEffect(() => {
+    const timer = setInterval(next, 5000)
+    return () => clearInterval(timer)
+  }, [next])
+
   return (
     <section className="relative min-h-[90vh] flex items-end pb-16 md:pb-24">
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-lifestyle.jpg"
-          alt="MOPERO 4Uのある暮らし"
-          fill
-          className="object-cover"
-          priority
-        />
+        {slides.map((slide, i) => (
+          <div
+            key={slide.src}
+            className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out"
+            style={{ opacity: i === current ? 1 : 0 }}
+          >
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              className="object-cover"
+              priority={i === 0}
+            />
+          </div>
+        ))}
         <div className="absolute inset-0 bg-gradient-to-t from-[hsl(30,10%,18%)] via-[hsl(30,10%,18%)]/40 to-transparent" />
       </div>
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6">
