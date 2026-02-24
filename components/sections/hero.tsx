@@ -74,7 +74,7 @@ export function HeroSection() {
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(30,10%,18%)] via-[hsl(30,10%,18%)]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(30,10%,18%)]/80 via-[hsl(30,10%,18%)]/20 via-[40%] to-transparent" />
       </div>
 
       <style jsx>{`
