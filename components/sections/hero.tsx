@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, useRef } from "react"
 import Image from "next/image"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
@@ -11,38 +11,82 @@ const slides = [
   { src: "/images/hero-slide-4.jpg", alt: "ヘルメットを被りMOPERO 4Uで街を走る女性" },
 ]
 
+const FADE_MS = 1800
+const HOLD_MS = 5000
+
 export function HeroSection() {
   const [current, setCurrent] = useState(0)
+  const [prev, setPrev] = useState<number | null>(null)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const next = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % slides.length)
+  const advance = useCallback(() => {
+    setCurrent((c) => {
+      setPrev(c)
+      return (c + 1) % slides.length
+    })
+    timeoutRef.current = setTimeout(() => {
+      setPrev(null)
+    }, FADE_MS)
   }, [])
 
   useEffect(() => {
-    const timer = setInterval(next, 5000)
-    return () => clearInterval(timer)
-  }, [next])
+    const interval = setInterval(advance, HOLD_MS)
+    return () => {
+      clearInterval(interval)
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    }
+  }, [advance])
 
   return (
     <section className="relative min-h-[90vh] flex items-end pb-16 md:pb-24">
-      <div className="absolute inset-0 z-0">
-        {slides.map((slide, i) => (
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Previous slide fading out */}
+        {prev !== null && (
           <div
-            key={slide.src}
-            className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out"
-            style={{ opacity: i === current ? 1 : 0 }}
+            key={`prev-${prev}`}
+            className="absolute inset-0"
+            style={{
+              animation: `heroFadeOut ${FADE_MS}ms ease-in-out forwards`,
+            }}
           >
             <Image
-              src={slide.src}
-              alt={slide.alt}
+              src={slides[prev].src}
+              alt={slides[prev].alt}
               fill
               className="object-cover"
-              priority={i === 0}
             />
           </div>
-        ))}
+        )}
+        {/* Current slide fading in */}
+        <div
+          key={`cur-${current}`}
+          className="absolute inset-0"
+          style={{
+            animation: prev !== null ? `heroFadeIn ${FADE_MS}ms ease-in-out forwards` : undefined,
+            opacity: prev !== null ? 0 : 1,
+          }}
+        >
+          <Image
+            src={slides[current].src}
+            alt={slides[current].alt}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[hsl(30,10%,18%)] via-[hsl(30,10%,18%)]/40 to-transparent" />
       </div>
+
+      <style jsx>{`
+        @keyframes heroFadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes heroFadeOut {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+      `}</style>
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6">
         <ScrollReveal direction="up" delay={200} duration={900}>
           <p className="text-[hsl(var(--warm-white))]/80 text-sm tracking-widest uppercase mb-4 font-sans font-light">
