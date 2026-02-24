@@ -127,6 +127,29 @@ export function ComparisonSection() {
             </tbody>
           </table>
         </div>
+
+        <div className="mt-16">
+          <ScrollReveal direction="up">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+                <Image
+                  src="/images/sidewalk-sign.jpg"
+                  alt="歩行者優先の標識がある歩道をMOPERO 4Uで走行する様子"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="font-serif text-lg md:text-xl text-foreground leading-tight mb-4">
+                  一部標識のある歩道も通行できます
+                </h3>
+                <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed">
+                  「自転車通行可」の標識がある歩道では、時速6km以下のモードに切り替えることで歩道を走行できます。歩行者優先を守りながら、より安全で柔軟なルート選びが可能です。
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
       </div>
     </section>
   )
