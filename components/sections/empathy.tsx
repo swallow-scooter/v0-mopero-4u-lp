@@ -16,14 +16,15 @@ export function EmpathySection() {
     <section className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
       <div className="max-w-3xl mx-auto px-6">
         <ScrollReveal direction="up" duration={800}>
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg mb-10">
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl mb-10 shadow-lg ring-1 ring-border/10">
             <Image
               src="/images/empathy-uphill.jpg"
               alt="坂道で自転車を押して歩く女性"
               fill
-              className="object-cover"
+              className="object-cover scale-[1.02]"
               priority
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--warm-white))]/20 to-transparent" />
           </div>
         </ScrollReveal>
         <ScrollReveal direction="up" delay={100}>
