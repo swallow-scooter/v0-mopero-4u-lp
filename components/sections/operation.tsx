@@ -21,10 +21,10 @@ export function OperationSection() {
     },
     {
       number: "03",
-      title: "アクセルをひねる",
-      description: "右手のグリップをゆっくりひねれば、静かに走り出します。",
+      title: "アクセルレバーを押す",
+      description: "右のハンドルにあるアクセルレバーを押すと静かに走り出します。",
       image: "/images/step-03-throttle.jpg",
-      alt: "スロットルグリップをひねる様子",
+      alt: "アクセルレバーを親指で押す様子",
     },
   ]
 
