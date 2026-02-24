@@ -19,7 +19,7 @@ export function EmpathySection() {
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg mb-10">
             <Image
               src="/images/empathy-uphill.jpg"
-              alt="坂道を自転車で上る女性の後ろ姿"
+              alt="坂道で自転車を押して歩く女性"
               fill
               className="object-cover"
               priority
