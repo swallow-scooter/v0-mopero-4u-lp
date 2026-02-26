@@ -53,7 +53,7 @@ export function PersonaSection() {
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg mb-8">
             <Image
               src="/images/interview-female.jpg"
-              alt="30代女性がMOPERO 4Uを体験しインタビューに答える様子"
+              alt="イベント会場でMOPERO 4Uに試乗する体験者の様子"
               fill
               className="object-cover"
             />
