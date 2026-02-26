@@ -44,16 +44,19 @@ export function PersonaSection() {
           </p>
         </ScrollReveal>
         <ScrollReveal direction="up" delay={100}>
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-16">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4">
             体験された方の声
           </h2>
+          <p className="text-xs md:text-sm text-[hsl(var(--soft-brown))] tracking-wide mb-16">
+            {'〜 大阪オートメッセ2026に体験出展 〜'}
+          </p>
         </ScrollReveal>
 
         <div>
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg mb-8">
             <Image
               src="/images/interview-female.jpg"
-              alt="30代女性がMOPERO 4Uを体験しインタビューに答える様子"
+              alt="イベント会場でMOPERO 4Uに試乗する体験者の様子"
               fill
               className="object-cover"
             />
