@@ -30,8 +30,8 @@ export function ComparisonSection() {
     { label: "こぐ必要", bicycle: "あり", mopero: "なし", scooter: "なし" },
     { label: "ヘルメット", bicycle: "努力義務", mopero: "努力義務", scooter: "必須" },
     { label: "駐輪場", bicycle: "利用可", mopero: "利用可", scooter: "利用不可が多い" },
-    { label: "走行場所", bicycle: "車道・自転車道", mopero: "車道・自転車道・自転車通行可の歩道", scooter: "車道" },
-    { label: "最高速度", bicycle: "制限なし", mopero: "20km/h", scooter: "30km/h" },
+    { label: "走行場所", bicycle: "車道・自転車道など", mopero: "車道・自転車道・自転車通行可の歩道", scooter: "車道" },
+    { label: "最高速度", bicycle: "道路標識に従う", mopero: "20km/h", scooter: "30km/h" },
   ]
 
   return (
@@ -126,6 +126,32 @@ export function ComparisonSection() {
               ))}
             </tbody>
           </table>
+        </div>
+
+      </div>
+
+      <div className="bg-background py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <ScrollReveal direction="up">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+                <Image
+                  src="/images/sidewalk-sign.jpg"
+                  alt="歩行者優先の標識がある歩道をMOPERO 4Uで走行する様子"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="font-serif text-lg md:text-xl text-foreground leading-tight mb-4">
+                  一部標識のある歩道も通行できます
+                </h3>
+                <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed">
+                  「自転車通行可」の標識がある歩道では、時速6km以下のモードに切り替えることで歩道を走行できます。歩行者優先を守りながら、より安全で柔軟なルート選びが可能です。
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

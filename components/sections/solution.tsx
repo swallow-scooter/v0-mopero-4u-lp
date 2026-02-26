@@ -7,14 +7,14 @@ export function SolutionSection() {
   return (
     <section className="py-20 md:py-32 bg-background">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <ScrollReveal direction="left" duration={800}>
-            <div className="relative aspect-[4/3] w-full">
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg ring-1 ring-border/10">
               <Image
                 src="/images/product-side.jpg"
-                alt="MOPERO 4U 製品写真"
+                alt="MOPERO 4U に乗って街を走る女性"
                 fill
-                className="object-contain"
+                className="object-cover scale-[1.02]"
               />
             </div>
           </ScrollReveal>

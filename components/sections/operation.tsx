@@ -7,10 +7,10 @@ export function OperationSection() {
   const steps = [
     {
       number: "01",
-      title: "ロックを外す",
-      description: "鍵を回して、サークル錠を解除するだけ。自転車と同じ操作です。",
+      title: "カード型キーをかざす",
+      description: "付属のカードキーを本体にかざすだけで電源ON。鍵を差し込む手間もありません。",
       image: "/images/step-01-unlock.jpg",
-      alt: "サークル錠を鍵で解除する様子",
+      alt: "カード型キーを本体にかざす様子",
     },
     {
       number: "02",
@@ -21,10 +21,10 @@ export function OperationSection() {
     },
     {
       number: "03",
-      title: "アクセルをひねる",
-      description: "右手のグリップをゆっくりひねれば、静かに走り出します。",
+      title: "アクセルレバーを押す",
+      description: "右のハンドルにあるアクセルレバーを押すと静かに走り出します。",
       image: "/images/step-03-throttle.jpg",
-      alt: "スロットルグリップをひねる様子",
+      alt: "アクセルレバーを親指で押す様子",
     },
   ]
 
