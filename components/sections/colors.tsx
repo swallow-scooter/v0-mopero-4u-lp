@@ -53,6 +53,10 @@ export function ColorsSection() {
           </h2>
         </ScrollReveal>
 
+        <p className="text-[10px] md:text-xs text-[hsl(var(--soft-brown))] text-center mb-3">
+          {'写真は開発中のイメージです。カラーリングや細かい外観はディスプレイ、印刷機器によって変わります。'}
+        </p>
+
         <div className="relative aspect-[16/9] w-full overflow-hidden mb-8 bg-[hsl(var(--warm-beige))]">
           <Image
             src={selected.image || "/placeholder.svg"}
