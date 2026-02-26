@@ -16,11 +16,11 @@ export function TrustSection() {
     },
     {
       icon: Lock,
-      title: "NFCキーシステム",
+      title: "大型リング錠と電子キーの二重ロック",
       description:
-        "専用キーで電源のオンオフ切り替え。盗難リスクを防ぎ、セキュリティを向上。",
+        "物理的な大型リング錠と電子キーによる電源管理のダブルセキュリティ。二重の防犯対策で盗難リスクを大幅に低減します。",
       image: "/images/trust-nfckey.jpg",
-      alt: "NFCキーで電源をオンにする様子",
+      alt: "大型リング錠と電子キーによる二重ロックシステム",
     },
     {
       icon: ParkingSquare,
