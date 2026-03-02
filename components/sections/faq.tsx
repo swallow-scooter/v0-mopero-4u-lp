@@ -123,6 +123,16 @@ export function FaqSection() {
             ))}
           </Accordion>
         </ScrollReveal>
+        <ScrollReveal direction="up" delay={300}>
+          <div className="mt-16 text-center">
+            <a
+              href="#price"
+              className="inline-flex items-center justify-center w-full px-8 py-4 bg-[#06C755] text-white text-sm font-medium tracking-wide hover:bg-[#05b64d] transition-colors"
+            >
+              公式LINE登録でお知らせを受ける
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )

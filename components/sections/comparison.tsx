@@ -9,18 +9,24 @@ const features = [
     description: "電気のみで動くからスロットルを回すだけでこがずに走れる",
     image: "/images/feature-throttle.jpg",
     alt: "スロットルグリップの接写",
+    rightImage: null,
+    rightAlt: null,
   },
   {
     title: "自転車よりコンパクト",
     description: "扱いやすく手軽に乗れる",
     image: "/images/feature-compact.jpg",
-    alt: "子乗せ自転車との大きさ比較",
+    alt: "オリーブグリーンのMOPERO 4U",
+    rightImage: null,
+    rightAlt: null,
   },
   {
     title: "家族みんなで使える",
     description: "免許不要で運転できる（16歳以上※）",
     image: "/images/feature-family.jpg",
     alt: "家族で使えるイメージ",
+    rightImage: null,
+    rightAlt: null,
   },
 ]
 
@@ -66,14 +72,35 @@ export function ComparisonSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {features.map((feature) => (
             <div key={feature.title} className="flex flex-col">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg mb-4">
-                <Image
-                  src={feature.image}
-                  alt={feature.alt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              {feature.rightImage ? (
+                <div className="flex gap-2 aspect-[4/3] w-full mb-4">
+                  <div className="relative flex-1 overflow-hidden rounded-lg bg-[hsl(var(--warm-beige))]">
+                    <Image
+                      src={feature.image}
+                      alt={feature.alt}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="relative flex-1 overflow-hidden rounded-lg bg-[hsl(var(--warm-beige))]">
+                    <Image
+                      src={feature.rightImage}
+                      alt={feature.rightAlt ?? ""}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ) : (
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg mb-4">
+                  <Image
+                    src={feature.image}
+                    alt={feature.alt}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
               <h3 className="font-serif text-base md:text-lg text-foreground mb-1">
                 {feature.title}
               </h3>
