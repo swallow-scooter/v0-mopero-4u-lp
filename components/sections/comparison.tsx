@@ -16,9 +16,9 @@ const features = [
     title: "自転車よりコンパクト",
     description: "扱いやすく手軽に乗れる",
     image: "/images/feature-compact.jpg",
-    alt: "子乗せ自転車との大きさ比較",
-    rightImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/29-yOO0izKYzk02nUoJyYWjU2ADjqeoD7.jpg",
-    rightAlt: "オリーブグリーンのMOPERO 4U",
+    alt: "オリーブグリーンのMOPERO 4U",
+    rightImage: null,
+    rightAlt: null,
   },
   {
     title: "家族みんなで使える",
