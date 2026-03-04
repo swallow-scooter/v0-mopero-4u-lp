@@ -16,6 +16,7 @@ import { EventSection } from "@/components/sections/event"
 import { ColorsSection } from "@/components/sections/colors"
 import { PriceSection } from "@/components/sections/price"
 import { FaqSection } from "@/components/sections/faq"
+import { YokohamaSection } from "@/components/sections/yokohama"
 import { ClosingSection } from "@/components/sections/closing"
 import { Footer } from "@/components/sections/footer"
 
@@ -60,7 +61,9 @@ export default function Page() {
         <PriceSection />
         {/* 15. FAQ */}
         <FaqSection />
-        {/* 16. Closing */}
+        {/* 16. Yokohama */}
+        <YokohamaSection />
+        {/* 17. Closing */}
         <ClosingSection />
       </main>
       <Footer />
