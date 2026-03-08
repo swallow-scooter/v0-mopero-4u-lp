@@ -110,16 +110,16 @@ export function HeroSection() {
         <ScrollReveal direction="up" delay={800} duration={900}>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="#trial"
+              href="#price"
               className="inline-flex items-center justify-center px-8 py-4 bg-[hsl(var(--warm-white))] text-[hsl(var(--charcoal))] text-sm font-medium tracking-wide hover:bg-[hsl(var(--warm-beige))] transition-colors"
             >
-              試乗予約する
+              価格と購入方法を確認
             </a>
             <a
-              href="#price"
+              href="#trial"
               className="inline-flex items-center justify-center px-8 py-4 border border-[hsl(var(--warm-white))]/30 text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-[hsl(var(--warm-white))]/10 transition-colors"
             >
-              価格と購入方法を確認
+              試乗予約する
             </a>
           </div>
         </ScrollReveal>
