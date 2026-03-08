@@ -16,6 +16,7 @@ import {
   Truck,
   Shield,
   ExternalLink,
+  Store,
 } from "lucide-react"
 
 const preparationItems = [
@@ -74,59 +75,126 @@ const postDeliveryItems = [
 
 export function PurchaseGuideSection() {
   return (
-    <section id="price" className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="price" className="py-24 md:py-40 bg-[hsl(var(--warm-white))]">
+      <div className="max-w-5xl mx-auto px-6">
         {/* Section Header */}
         <ScrollReveal direction="up">
-          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans text-center">
+          <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-8 font-sans text-center">
             Price
           </p>
         </ScrollReveal>
         <ScrollReveal direction="up" delay={100}>
-          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4 text-center">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight text-balance mb-20 text-center">
             特別価格でお届けします。
           </h2>
         </ScrollReveal>
-        <ScrollReveal direction="up" delay={150}>
-          <p className="text-sm text-[hsl(var(--highlight))] leading-relaxed mb-10 text-center">
-            特別先行予約価格でのご提供は数量限定および無くなり次第終了となります。
-          </p>
-        </ScrollReveal>
 
-        {/* Price Card */}
-        <ScrollReveal direction="up" delay={200}>
-          <div className="bg-background p-8 md:p-12 w-full max-w-md mx-auto text-center mb-16">
-            <p className="text-sm text-[hsl(var(--soft-brown))] mb-2">
-              通常価格
-            </p>
-            <p className="text-lg text-[hsl(var(--soft-brown))] line-through mb-4">
-              {'¥189,800（税込）'}
-            </p>
-            <div className="flex items-baseline justify-center gap-3 mb-2">
-              <span className="inline-block px-3 py-1 bg-[hsl(var(--highlight))] text-[hsl(var(--warm-white))] text-xs font-medium tracking-wider">
-                {'最大 45% OFF'}
-              </span>
+        {/* Price Cards - 2 Column Layout */}
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-24">
+          {/* Main Card - Official Online Store */}
+          <ScrollReveal direction="up" delay={150}>
+            <div className="bg-background p-8 md:p-10 lg:p-12 h-full flex flex-col">
+              {/* Badge */}
+              <div className="mb-8">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))] text-xs font-medium tracking-wider">
+                  <span className="w-1.5 h-1.5 bg-[hsl(var(--highlight))] rounded-full" />
+                  公式オンラインストア限定
+                </span>
+              </div>
+
+              {/* Regular Price */}
+              <p className="text-sm text-[hsl(var(--soft-brown))] mb-1">
+                通常価格
+              </p>
+              <p className="text-lg text-[hsl(var(--soft-brown))] line-through mb-8">
+                {'¥189,800（税込）'}
+              </p>
+
+              {/* Discount Badge */}
+              <div className="mb-4">
+                <span className="text-5xl md:text-6xl lg:text-7xl font-serif text-[hsl(var(--highlight))] leading-none">
+                  {'45%〜25%'}
+                </span>
+                <span className="text-2xl md:text-3xl font-serif text-[hsl(var(--highlight))] ml-1">
+                  OFF
+                </span>
+              </div>
+
+              {/* Sale Price */}
+              <p className="text-3xl md:text-4xl font-serif text-foreground mb-2">
+                {'¥104,390'}
+                <span className="text-base font-sans text-[hsl(var(--soft-brown))] ml-1">（税込）〜</span>
+              </p>
+              <p className="text-xs text-[hsl(var(--soft-brown))] mb-6">
+                配送の場合には別途送料がかかります
+              </p>
+
+              {/* Urgency Message */}
+              <div className="mt-auto pt-6 border-t border-border">
+                <p className="text-sm text-foreground font-medium mb-2">
+                  数量限定、早いほどお得にご購入いただけます。
+                </p>
+                <p className="text-xs text-[hsl(var(--soft-brown))] leading-relaxed">
+                  最もお得な45%〜25%OFFの早割価格は公式オンラインストア限定です。
+                </p>
+              </div>
             </div>
-            <p className="text-4xl md:text-5xl font-serif text-foreground mt-4 mb-1">
-              {'¥104,390'}
-              <span className="text-lg font-sans text-[hsl(var(--soft-brown))]">（税込）</span>
-            </p>
-            <p className="text-xs text-[hsl(var(--soft-brown))] mb-2">
-              配送の場合には別途送料がかかります
-            </p>
-            <p className="text-xs text-[hsl(var(--highlight))]">
-              {'数量限定、早いほどお得にご購入いただけます。'}
-            </p>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
 
+          {/* Sub Card - Retail Stores */}
+          <ScrollReveal direction="up" delay={250}>
+            <div className="bg-[hsl(var(--warm-beige))] p-8 md:p-10 lg:p-12 h-full flex flex-col">
+              {/* Icon */}
+              <div className="mb-8">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-background">
+                  <Store className="w-6 h-6 text-[hsl(var(--soft-brown))]" />
+                </div>
+              </div>
+
+              {/* Title */}
+              <h3 className="font-serif text-xl md:text-2xl text-foreground mb-4">
+                量販店・販売店
+              </h3>
+
+              {/* Description */}
+              <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-8">
+                お近くの量販店・販売店でもご予約いただけます。
+              </p>
+
+              {/* Discount Info */}
+              <div className="mb-6">
+                <span className="text-3xl md:text-4xl font-serif text-foreground leading-none">
+                  20%
+                </span>
+                <span className="text-lg font-serif text-foreground ml-1">
+                  OFF
+                </span>
+              </div>
+
+              {/* Date */}
+              <div className="mt-auto pt-6 border-t border-[hsl(var(--border))]">
+                <div className="flex items-center gap-2 text-[hsl(var(--soft-brown))]">
+                  <Calendar className="w-4 h-4" />
+                  <p className="text-sm">
+                    3月14日より予約受付開始予定
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+
+      </div>
+
+      {/* Purchase Guide - Narrower Container */}
+      <div className="max-w-3xl mx-auto px-6">
         {/* Purchase Guide Header */}
         <ScrollReveal direction="up" delay={250}>
           <h3 className="font-serif text-xl md:text-2xl text-foreground leading-tight text-balance mb-4 text-center">
-            予約開始前に必ずご確認ください
+            公式オンラインストアでの予約方法
           </h3>
           <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-12 text-center">
-            スムーズに予約購入するためのガイド
+            予約開始前にご確認ください
           </p>
         </ScrollReveal>
 
@@ -198,25 +266,17 @@ export function PurchaseGuideSection() {
                   </div>
                 ))}
               </div>
-              {/* 予約販売ページへのリンク（強調表示） */}
-              <div className="mt-6 p-5 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
-                <div className="flex items-center gap-2 mb-3">
-                  <Calendar className="w-5 h-5 text-[hsl(var(--highlight))]" />
-                  <p className="text-xs tracking-wider text-[hsl(var(--highlight))] font-medium">
-                    2026年3月14日（土）12:00 オープン
-                  </p>
-                </div>
-                <a
-                  href="https://swallow-scooter.com/products/mopero-4u_3-14_preorder_start"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-[hsl(var(--highlight))] text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
-                >
-                  予約販売ページはこちら
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-                <p className="text-xs text-[hsl(var(--warm-white))]/70 mt-3 text-center">
-                  ※オープン前はページにアクセスできません
+              {/* LINE配信案内 */}
+              <div className="mt-6 p-5 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))] text-center">
+                <p className="text-sm leading-relaxed mb-1">
+                  予約販売ページのURLは
+                </p>
+                <p className="text-sm leading-relaxed font-medium mb-3">
+                  3月14日 12:00にLINEで配信します。
+                </p>
+                <p className="text-xs text-[hsl(var(--warm-white))]/70 leading-relaxed">
+                  先着順のため<br />
+                  LINEからのアクセスが最も確実です。
                 </p>
               </div>
             </div>
