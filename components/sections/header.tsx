@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -30,21 +31,17 @@ export function Header() {
       }`}
     >
       <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#" className="flex items-center gap-2">
-          <span
-            className={`text-sm font-medium tracking-widest transition-colors ${
-              scrolled ? "text-foreground" : "text-[hsl(var(--warm-white))]"
+        <a href="#" className="flex items-center">
+          <Image
+            src="/images/mopero-4u-logo-en.png"
+            alt="MOPERO 4U"
+            width={140}
+            height={28}
+            className={`h-6 w-auto transition-all ${
+              scrolled ? "brightness-0" : "brightness-0 invert"
             }`}
-          >
-            SWALLOW
-          </span>
-          <span
-            className={`text-xs tracking-wide transition-colors ${
-              scrolled ? "text-[hsl(var(--soft-brown))]" : "text-[hsl(var(--warm-white))]/60"
-            }`}
-          >
-            MOPERO 4U
-          </span>
+            priority
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
