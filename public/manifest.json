@@ -1,0 +1,21 @@
+{
+  "name": "MOPERO 4U | SWALLOW",
+  "short_name": "MOPERO 4U",
+  "description": "SWALLOWの特定小型原付 MOPERO 4U。免許不要、16歳以上で乗れる新しい移動手段。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f0ea",
+  "theme_color": "#f5f0ea",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
