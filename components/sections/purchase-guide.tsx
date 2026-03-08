@@ -74,7 +74,7 @@ const postDeliveryItems = [
 
 export function PurchaseGuideSection() {
   return (
-    <section id="purchase-guide" className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
+    <section id="price" className="py-20 md:py-32 bg-[hsl(var(--warm-white))]">
       <div className="max-w-3xl mx-auto px-6">
         {/* Section Header */}
         <ScrollReveal direction="up">

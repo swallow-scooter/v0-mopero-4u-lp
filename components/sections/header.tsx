@@ -62,7 +62,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href="#purchase-guide"
+            href="#price"
             className="inline-flex items-center justify-center px-5 py-2 text-xs font-medium tracking-wide transition-colors bg-[hsl(var(--highlight))] text-[hsl(var(--charcoal))] hover:opacity-90"
           >
             先行予約販売でお得にGET
@@ -96,7 +96,7 @@ export function Header() {
             </a>
           ))}
           <a
-            href="#purchase-guide"
+            href="#price"
             onClick={() => setMenuOpen(false)}
             className="block w-full text-center px-5 py-3 bg-[hsl(var(--highlight))] text-[hsl(var(--charcoal))] text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
           >
