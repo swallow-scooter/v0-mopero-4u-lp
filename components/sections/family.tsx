@@ -10,7 +10,7 @@ export function FamilySection() {
       description: "お子さんからご両親まで、家族みんなで共有できます。",
     },
     {
-      title: "シート高さ調整可能",
+      title: "シートとハンドル高さ調整可能",
       description: "身長141cm以上で対応。家族それぞれの体格に合わせて調整できます。",
     },
     {
