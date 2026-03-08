@@ -119,7 +119,7 @@ export function HeroSection() {
               href="#price"
               className="inline-flex items-center justify-center px-8 py-4 border border-[hsl(var(--warm-white))]/30 text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-[hsl(var(--warm-white))]/10 transition-colors"
             >
-              価格を見る
+              価格と購入方法を確認
             </a>
           </div>
         </ScrollReveal>
