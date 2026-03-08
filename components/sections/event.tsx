@@ -20,14 +20,14 @@ export function EventSection() {
     },
     {
       location: "ビックカメラ新宿西口店 試乗会",
-      date: "2026年3月14日（土）",
+      date: "2026年3月14日（土）・15日（日）",
       venue: "",
       reservations: 0,
       mapUrl: "https://www.google.com/maps/search/?api=1&query=ビックカメラ新宿西口店",
     },
     {
       location: "ヨドバシカメラ梅田店 試乗会",
-      date: "2026年3月14日（土）",
+      date: "2026年3月14日（土）・15日（日）",
       venue: "",
       reservations: 0,
       mapUrl: "https://www.google.com/maps/search/?api=1&query=ヨドバシカメラ梅田",
