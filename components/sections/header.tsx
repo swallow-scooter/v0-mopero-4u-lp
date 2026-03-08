@@ -19,7 +19,6 @@ export function Header() {
   const navLinks = [
     { label: "特徴", href: "#features" },
     { label: "試乗会", href: "#trial" },
-    { label: "価格", href: "#price" },
   ]
 
   return (
