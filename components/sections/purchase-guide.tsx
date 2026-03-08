@@ -191,10 +191,10 @@ export function PurchaseGuideSection() {
         {/* Purchase Guide Header */}
         <ScrollReveal direction="up" delay={250}>
           <h3 className="font-serif text-xl md:text-2xl text-foreground leading-tight text-balance mb-4 text-center">
-            予約開始前に必ずご確認ください
+            公式オンラインストアでの予約方法
           </h3>
           <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-12 text-center">
-            スムーズに予約購入するためのガイド
+            予約開始前にご確認ください
           </p>
         </ScrollReveal>
 
