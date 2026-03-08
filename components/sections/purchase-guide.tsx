@@ -17,6 +17,9 @@ import {
   Shield,
   ExternalLink,
   Store,
+  Wallet,
+  Building2,
+  Smartphone,
 } from "lucide-react"
 
 const preparationItems = [
@@ -70,6 +73,29 @@ const postDeliveryItems = [
   {
     icon: Shield,
     text: "自賠責保険加入",
+  },
+]
+
+const paymentMethods = [
+  {
+    icon: CreditCard,
+    text: "クレジットカード",
+  },
+  {
+    icon: Building2,
+    text: "銀行振込",
+  },
+  {
+    icon: Wallet,
+    text: "ペイディ（後払い）",
+  },
+  {
+    icon: Smartphone,
+    text: "Google Pay",
+  },
+  {
+    icon: Smartphone,
+    text: "PayPay",
   },
 ]
 
@@ -233,15 +259,58 @@ export function PurchaseGuideSection() {
           </div>
         </ScrollReveal>
 
-        {/* STEP 2: 予約購入の流れ */}
+        {/* STEP 2: 決済方法について */}
         <ScrollReveal direction="up" delay={350}>
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
+                <CreditCard className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 2</span>
+                <h3 className="font-serif text-lg md:text-xl text-foreground">決済方法について</h3>
+              </div>
+            </div>
+            <div className="bg-background p-6 md:p-8">
+              <p className="text-sm text-[hsl(var(--soft-brown))] mb-6">
+                公式オンラインストアでの決済方法は以下の通りです。
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                {paymentMethods.map((item, i) => (
+                  <div key={i} className="flex items-center gap-4">
+                    <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--warm-beige))]">
+                      <item.icon className="w-5 h-5 text-[hsl(var(--charcoal))]" />
+                    </div>
+                    <span className="text-sm text-foreground">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              {/* 注意ボックス */}
+              <div className="p-5 bg-[#FEF3C7] border border-[#F59E0B]">
+                <div className="flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-[#B45309] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-medium text-[#92400E] mb-1">ご注意</p>
+                    <p className="text-sm text-[#B45309] leading-relaxed">
+                      予約は<span className="font-bold">オンラインでの決済完了をもって受付</span>となります。<br />
+                      お電話や店頭での予約受付は行っておりませんのでご了承ください。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* STEP 3: 予約購入の流れ */}
+        <ScrollReveal direction="up" delay={400}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
                 <ShoppingCart className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 2</span>
+                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 3</span>
                 <h3 className="font-serif text-lg md:text-xl text-foreground">予約購入の流れ</h3>
               </div>
             </div>
@@ -283,15 +352,15 @@ export function PurchaseGuideSection() {
           </div>
         </ScrollReveal>
 
-        {/* STEP 3: ご注意 */}
-        <ScrollReveal direction="up" delay={400}>
+        {/* STEP 4: ご注意 */}
+        <ScrollReveal direction="up" delay={450}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
                 <AlertTriangle className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 3</span>
+                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 4</span>
                 <h3 className="font-serif text-lg md:text-xl text-foreground">ご注意</h3>
               </div>
             </div>
@@ -321,15 +390,15 @@ export function PurchaseGuideSection() {
           </div>
         </ScrollReveal>
 
-        {/* STEP 4: 本人確認について */}
-        <ScrollReveal direction="up" delay={450}>
+        {/* STEP 5: 本人確認について */}
+        <ScrollReveal direction="up" delay={500}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
                 <UserCheck className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 4</span>
+                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 5</span>
                 <h3 className="font-serif text-lg md:text-xl text-foreground">本人確認について</h3>
               </div>
             </div>
@@ -350,15 +419,15 @@ export function PurchaseGuideSection() {
           </div>
         </ScrollReveal>
 
-        {/* STEP 5: 納車後の手続き */}
-        <ScrollReveal direction="up" delay={500}>
+        {/* STEP 6: 納車後の手続き */}
+        <ScrollReveal direction="up" delay={550}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
                 <Truck className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 5</span>
+                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 6</span>
                 <h3 className="font-serif text-lg md:text-xl text-foreground">納車後の手続き</h3>
               </div>
             </div>
