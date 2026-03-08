@@ -161,15 +161,27 @@ export function PurchaseGuideSection() {
                   </div>
                 ))}
               </div>
-              <a
-                href="https://swallow-scooter.com/products/mopero-4u_3-14_preorder_start"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 text-sm text-[hsl(var(--highlight))] hover:underline"
-              >
-                予約販売ページはこちら
-                <ExternalLink className="w-4 h-4" />
-              </a>
+              {/* 予約販売ページへのリンク（強調表示） */}
+              <div className="mt-6 p-5 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
+                <div className="flex items-center gap-2 mb-3">
+                  <Calendar className="w-5 h-5 text-[hsl(var(--highlight))]" />
+                  <p className="text-xs tracking-wider text-[hsl(var(--highlight))] font-medium">
+                    2026年3月14日（土）12:00 オープン
+                  </p>
+                </div>
+                <a
+                  href="https://swallow-scooter.com/products/mopero-4u_3-14_preorder_start"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-[hsl(var(--highlight))] text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
+                >
+                  予約販売ページはこちら
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+                <p className="text-xs text-[hsl(var(--warm-white))]/70 mt-3 text-center">
+                  ※オープン前はページにアクセスできません
+                </p>
+              </div>
             </div>
           </div>
         </ScrollReveal>
