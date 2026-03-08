@@ -20,6 +20,17 @@ export const metadata: Metadata = {
   title: 'MOPERO 4U | SWALLOW - あなたの次の"こがない"自転車。',
   description:
     'SWALLOWの特定小型原付 MOPERO 4U。免許不要、16歳以上で乗れる新しい移動手段。自転車の延長として、日常をもっと楽に。',
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.json',
 }
 
 export const viewport: Viewport = {
