@@ -14,7 +14,7 @@ import { RepairSection } from "@/components/sections/repair"
 import { DomesticSection } from "@/components/sections/domestic"
 import { EventSection } from "@/components/sections/event"
 import { ColorsSection } from "@/components/sections/colors"
-import { PriceSection } from "@/components/sections/price"
+import { PurchaseGuideSection } from "@/components/sections/purchase-guide"
 import { FaqSection } from "@/components/sections/faq"
 import { ClosingSection } from "@/components/sections/closing"
 import { Footer } from "@/components/sections/footer"
@@ -56,8 +56,8 @@ export default function Page() {
         <EventSection />
         {/* 13. Colors */}
         <ColorsSection />
-        {/* 14. Price */}
-        <PriceSection />
+        {/* 14. Price & Purchase Guide */}
+        <PurchaseGuideSection />
         {/* 15. FAQ */}
         <FaqSection />
         {/* 16. Closing */}

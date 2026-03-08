@@ -63,9 +63,9 @@ export function Header() {
           ))}
           <a
             href="#price"
-            className="inline-flex items-center justify-center px-5 py-2 text-xs font-medium tracking-wide transition-colors bg-[#06C755] text-white hover:bg-[#05b64d]"
+            className="inline-flex items-center justify-center px-5 py-2 text-xs font-medium tracking-wide transition-colors bg-[hsl(var(--highlight))] text-[hsl(var(--charcoal))] hover:opacity-90"
           >
-            公式LINE登録でお知らせを受ける
+            先行予約販売でお得にGET
           </a>
         </nav>
 
@@ -98,9 +98,9 @@ export function Header() {
           <a
             href="#price"
             onClick={() => setMenuOpen(false)}
-            className="block w-full text-center px-5 py-3 bg-[#06C755] text-white text-sm font-medium tracking-wide hover:bg-[#05b64d] transition-colors"
+            className="block w-full text-center px-5 py-3 bg-[hsl(var(--highlight))] text-[hsl(var(--charcoal))] text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
           >
-            公式LINE登録でお知らせを受ける
+            先行予約販売でお得にGET
           </a>
         </div>
       )}
