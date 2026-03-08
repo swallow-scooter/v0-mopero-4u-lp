@@ -79,22 +79,59 @@ export function PurchaseGuideSection() {
         {/* Section Header */}
         <ScrollReveal direction="up">
           <p className="text-[hsl(var(--soft-brown))] text-xs tracking-widest uppercase mb-6 font-sans text-center">
-            Purchase Guide
+            Price
           </p>
         </ScrollReveal>
         <ScrollReveal direction="up" delay={100}>
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground leading-tight text-balance mb-4 text-center">
-            予約開始前に必ずご確認ください
+            特別価格でお届けします。
           </h2>
         </ScrollReveal>
         <ScrollReveal direction="up" delay={150}>
+          <p className="text-sm text-[hsl(var(--highlight))] leading-relaxed mb-10 text-center">
+            特別先行予約価格でのご提供は数量限定および無くなり次第終了となります。
+          </p>
+        </ScrollReveal>
+
+        {/* Price Card */}
+        <ScrollReveal direction="up" delay={200}>
+          <div className="bg-background p-8 md:p-12 w-full max-w-md mx-auto text-center mb-16">
+            <p className="text-sm text-[hsl(var(--soft-brown))] mb-2">
+              通常価格
+            </p>
+            <p className="text-lg text-[hsl(var(--soft-brown))] line-through mb-4">
+              {'¥189,800（税込）'}
+            </p>
+            <div className="flex items-baseline justify-center gap-3 mb-2">
+              <span className="inline-block px-3 py-1 bg-[hsl(var(--highlight))] text-[hsl(var(--warm-white))] text-xs font-medium tracking-wider">
+                {'最大 45% OFF'}
+              </span>
+            </div>
+            <p className="text-4xl md:text-5xl font-serif text-foreground mt-4 mb-1">
+              {'¥104,390'}
+              <span className="text-lg font-sans text-[hsl(var(--soft-brown))]">（税込）</span>
+            </p>
+            <p className="text-xs text-[hsl(var(--soft-brown))] mb-2">
+              配送の場合には別途送料がかかります
+            </p>
+            <p className="text-xs text-[hsl(var(--highlight))]">
+              {'数量限定、早いほどお得にご購入いただけます。'}
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Purchase Guide Header */}
+        <ScrollReveal direction="up" delay={250}>
+          <h3 className="font-serif text-xl md:text-2xl text-foreground leading-tight text-balance mb-4 text-center">
+            予約開始前に必ずご確認ください
+          </h3>
           <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-12 text-center">
             スムーズに予約購入するためのガイド
           </p>
         </ScrollReveal>
 
         {/* STEP 1: 購入前の準備 */}
-        <ScrollReveal direction="up" delay={200}>
+        <ScrollReveal direction="up" delay={300}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
@@ -129,7 +166,7 @@ export function PurchaseGuideSection() {
         </ScrollReveal>
 
         {/* STEP 2: 予約購入の流れ */}
-        <ScrollReveal direction="up" delay={250}>
+        <ScrollReveal direction="up" delay={350}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
@@ -187,7 +224,7 @@ export function PurchaseGuideSection() {
         </ScrollReveal>
 
         {/* STEP 3: ご注意 */}
-        <ScrollReveal direction="up" delay={300}>
+        <ScrollReveal direction="up" delay={400}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
@@ -225,7 +262,7 @@ export function PurchaseGuideSection() {
         </ScrollReveal>
 
         {/* STEP 4: 本人確認について */}
-        <ScrollReveal direction="up" delay={350}>
+        <ScrollReveal direction="up" delay={450}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
@@ -254,7 +291,7 @@ export function PurchaseGuideSection() {
         </ScrollReveal>
 
         {/* STEP 5: 納車後の手続き */}
-        <ScrollReveal direction="up" delay={400}>
+        <ScrollReveal direction="up" delay={500}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
