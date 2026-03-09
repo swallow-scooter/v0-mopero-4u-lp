@@ -91,7 +91,6 @@ export function EarlyBirdSection() {
             早割プラン
           </h3>
           <p className="text-sm text-[hsl(var(--soft-brown))] max-w-md mx-auto leading-relaxed">
-            クラウドファンディング方式で、<br className="sm:hidden" />
             早いほどお得にご購入いただけます。
           </p>
         </div>
