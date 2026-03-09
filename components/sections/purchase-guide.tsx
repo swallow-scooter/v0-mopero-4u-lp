@@ -267,15 +267,8 @@ export function PurchaseGuideSection() {
               </div>
               {/* LINE配信案内 */}
               <div className="mt-6 p-5 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))] text-center">
-                <p className="text-sm leading-relaxed mb-1">
-                  予約販売ページのURLは
-                </p>
-                <p className="text-sm leading-relaxed font-medium mb-3">
-                  3月14日 12:00にLINEで配信します。
-                </p>
-                <p className="text-xs text-[hsl(var(--warm-white))]/70 leading-relaxed">
-                  先着順のため<br />
-                  LINEからのアクセスが最も確実です。
+                <p className="text-sm leading-relaxed">
+                  予約販売ページのURLはまもなく公開されます。公開まで今しばらくお待ちください。
                 </p>
               </div>
 
