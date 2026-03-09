@@ -139,7 +139,7 @@ export function PurchaseGuideSection() {
               {/* Discount Badge */}
               <div className="mb-4">
                 <span className="text-5xl md:text-6xl lg:text-7xl font-serif text-[hsl(var(--highlight))] leading-none">
-                  {'45%〜25%'}
+                  {'45%〜20%'}
                 </span>
                 <span className="text-2xl md:text-3xl font-serif text-[hsl(var(--highlight))] ml-1">
                   OFF
@@ -161,7 +161,7 @@ export function PurchaseGuideSection() {
                   数量限定、早いほどお得にご購入いただけます。
                 </p>
                 <p className="text-xs text-[hsl(var(--soft-brown))] leading-relaxed">
-                  最もお得な45%〜25%OFFの早割価格は公式オンラインストア限定です。
+                  最もお得な45%〜20%OFFの早割価格は公式オンラインストア限定です。
                 </p>
               </div>
             </div>
@@ -412,7 +412,7 @@ export function PurchaseGuideSection() {
               </p>
               <div className="p-4 bg-[hsl(var(--warm-beige))] border-l-4 border-[hsl(var(--highlight))]">
                 <p className="text-xs text-[hsl(var(--highlight))] font-medium leading-relaxed">
-                  ※本人確認が完了しない場合は発送できません
+                  ※本人確認が完了しな��場合は発送できません
                 </p>
               </div>
             </div>
