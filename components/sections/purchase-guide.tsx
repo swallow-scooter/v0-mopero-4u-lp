@@ -380,7 +380,7 @@ export function PurchaseGuideSection() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-[#92400E] mb-1">納車時期</p>
-                    <p className="text-sm text-[#B45309]">2026年6月末予定</p>
+                    <p className="text-sm text-[#B45309]">2026年6月下旬以降順次発送</p>
                     <p className="text-xs text-[#B45309] mt-1">※生産状況により遅延する場合があります</p>
                   </div>
                 </div>
