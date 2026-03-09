@@ -219,9 +219,6 @@ export function EarlyBirdSection() {
               20%OFF
             </p>
           </div>
-          <p className="text-xs text-[hsl(var(--soft-brown))] mt-4 leading-relaxed">
-            各割引プランは先着順です。予定数に達すると自動的に次の割引率に切り替わります。
-          </p>
         </div>
       </ScrollReveal>
     </div>
