@@ -88,7 +88,7 @@ export function EarlyBirdSection() {
             数量限定
           </div>
           <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-4">
-            早割プラン
+            公式オンラインだけの早割プラン
           </h3>
           <p className="text-sm text-[hsl(var(--soft-brown))] max-w-md mx-auto leading-relaxed">
             早いほどお得にご購入いただけます。
