@@ -232,19 +232,177 @@ export function PurchaseGuideSection() {
           </p>
         </ScrollReveal>
 
-        {/* STEP 1: 購入前の準備 */}
+        {/* STEP 1: 予約購入の流れ */}
         <ScrollReveal direction="up" delay={300}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
-                <CheckCircle className="w-5 h-5" />
+                <ShoppingCart className="w-5 h-5" />
               </div>
               <div>
                 <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 1</span>
-                <h3 className="font-serif text-lg md:text-xl text-foreground">購入前の準備</h3>
+                <h3 className="font-serif text-lg md:text-xl text-foreground">予約購入の流れ</h3>
               </div>
             </div>
             <div className="bg-background p-6 md:p-8">
+              <div className="space-y-0">
+                {purchaseFlow.map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className="flex items-center justify-center w-8 h-8 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))] text-sm font-medium">
+                        {item.step}
+                      </div>
+                      {i < purchaseFlow.length - 1 && (
+                        <div className="w-px h-8 bg-border" />
+                      )}
+                    </div>
+                    <div className="pb-6">
+                      <p className="text-sm text-foreground font-medium">{item.title}</p>
+                      {item.description && (
+                        <p className="text-xs text-[hsl(var(--soft-brown))] mt-1">{item.description}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {/* LINE配信案内 */}
+              <div className="mt-6 p-5 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))] text-center">
+                <p className="text-sm leading-relaxed mb-1">
+                  予約販売ページのURLは
+                </p>
+                <p className="text-sm leading-relaxed font-medium mb-3">
+                  3月14日 12:00にLINEで配信します。
+                </p>
+                <p className="text-xs text-[hsl(var(--warm-white))]/70 leading-relaxed">
+                  先着順のため<br />
+                  LINEからのアクセスが最も確実です。
+                </p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* STEP 2: ご注意 */}
+        <ScrollReveal direction="up" delay={350}>
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
+                <AlertTriangle className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 2</span>
+                <h3 className="font-serif text-lg md:text-xl text-foreground">ご注意</h3>
+              </div>
+            </div>
+            <div className="bg-[#FEF3C7] border border-[#F59E0B] p-6 md:p-8">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex items-center justify-center w-10 h-10 bg-[#FDE68A]">
+                    <Clock className="w-5 h-5 text-[#B45309]" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-[#92400E] mb-1">納車時期</p>
+                    <p className="text-sm text-[#B45309]">2026年6月下旬以降順次発送</p>
+                    <p className="text-xs text-[#B45309] mt-1">※生産状況により遅延する場合があります</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex items-center justify-center w-10 h-10 bg-[#FDE68A]">
+                    <XCircle className="w-5 h-5 text-[#B45309]" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-[#92400E] mb-1">キャンセル・変更</p>
+                    <p className="text-sm text-[#B45309]">受注生産のため決済後のキャンセル・カラー変更はできません</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* STEP 3: 本人確認について */}
+        <ScrollReveal direction="up" delay={400}>
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
+                <UserCheck className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 3</span>
+                <h3 className="font-serif text-lg md:text-xl text-foreground">本人確認について</h3>
+              </div>
+            </div>
+            <div className="bg-background p-6 md:p-8">
+              <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-4">
+                特定小型原付は発送前に本人確認を行うことが必須となっています。
+              </p>
+              <p className="text-sm text-foreground leading-relaxed mb-4">
+                購入完了メールに記載されている<br />
+                <span className="font-medium">本人確認サイトから手続き</span>を行ってください。
+              </p>
+              <div className="p-4 bg-[hsl(var(--warm-beige))] border-l-4 border-[hsl(var(--highlight))]">
+                <p className="text-xs text-[hsl(var(--highlight))] font-medium leading-relaxed">
+                  ※本人確認が完了しない場合は発送できません
+                </p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* STEP 4: 納車後の手続き */}
+        <ScrollReveal direction="up" delay={450}>
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
+                <Truck className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 4</span>
+                <h3 className="font-serif text-lg md:text-xl text-foreground">納車後の手続き</h3>
+              </div>
+            </div>
+            <div className="bg-background p-6 md:p-8">
+              <p className="text-sm text-[hsl(var(--soft-brown))] mb-6">
+                車体到着後に以下の手続きを行ってください。
+              </p>
+              <div className="space-y-4 mb-6">
+                {postDeliveryItems.map((item, i) => (
+                  <div key={i} className="flex items-center gap-4">
+                    <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--warm-beige))]">
+                      <item.icon className="w-5 h-5 text-[hsl(var(--charcoal))]" />
+                    </div>
+                    <span className="text-sm text-foreground">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="https://swallow-scooter.com/pages/startup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full px-6 py-4 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-[hsl(var(--soft-brown))] transition-colors"
+              >
+                詳しい手続きはこちら
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* 補足情報: 購入前の準備と決済方法 */}
+        <ScrollReveal direction="up" delay={500}>
+          <div className="mt-16 pt-10 border-t border-border">
+            <h4 className="font-serif text-lg md:text-xl text-foreground text-center mb-8">
+              購入についての補足情報
+            </h4>
+            
+            {/* 購入前の準備 */}
+            <div className="bg-background p-6 md:p-8 mb-6">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--warm-beige))]">
+                  <CheckCircle className="w-5 h-5 text-[hsl(var(--charcoal))]" />
+                </div>
+                <h5 className="font-serif text-base md:text-lg text-foreground">購入前の準備</h5>
+              </div>
               <p className="text-sm text-[hsl(var(--soft-brown))] mb-6">
                 購入前に以下を準備しておくとスムーズに購入できます。
               </p>
@@ -262,6 +420,42 @@ export function PurchaseGuideSection() {
                 <p className="text-xs text-[hsl(var(--soft-brown))] leading-relaxed">
                   ※SWALLOWアカウントを事前に作成し住所登録しておくとスムーズに購入できます
                 </p>
+              </div>
+            </div>
+
+            {/* 決済方法 */}
+            <div className="bg-background p-6 md:p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--warm-beige))]">
+                  <CreditCard className="w-5 h-5 text-[hsl(var(--charcoal))]" />
+                </div>
+                <h5 className="font-serif text-base md:text-lg text-foreground">決済方法について</h5>
+              </div>
+              <p className="text-sm text-[hsl(var(--soft-brown))] mb-6">
+                公式オンラインストアでの決済方法は以下の通りです。
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                {paymentMethods.map((item, i) => (
+                  <div key={i} className="flex items-center gap-4">
+                    <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--warm-beige))]">
+                      <item.icon className="w-5 h-5 text-[hsl(var(--charcoal))]" />
+                    </div>
+                    <span className="text-sm text-foreground">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              {/* 注意ボックス */}
+              <div className="p-5 bg-[#FEF3C7] border border-[#F59E0B]">
+                <div className="flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-[#B45309] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-medium text-[#92400E] mb-1">ご注意</p>
+                    <p className="text-sm text-[#B45309] leading-relaxed">
+                      予約は<span className="font-bold">オンラインでの決済完了をもって受付</span>となります。<br />
+                      お電話や店頭での予約受付は行っておりませんのでご了承ください。
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
