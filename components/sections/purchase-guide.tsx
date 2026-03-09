@@ -139,7 +139,7 @@ export function PurchaseGuideSection() {
               {/* Discount Badge */}
               <div className="mb-4">
                 <span className="text-5xl md:text-6xl lg:text-7xl font-serif text-[hsl(var(--highlight))] leading-none">
-                  {'45%〜25%'}
+                  {'45%〜20%'}
                 </span>
                 <span className="text-2xl md:text-3xl font-serif text-[hsl(var(--highlight))] ml-1">
                   OFF
@@ -161,7 +161,7 @@ export function PurchaseGuideSection() {
                   数量限定、早いほどお得にご購入いただけます。
                 </p>
                 <p className="text-xs text-[hsl(var(--soft-brown))] leading-relaxed">
-                  最もお得な45%〜25%OFFの早割価格は公式オンラインストア限定です。
+                  最もお得な45%〜20%OFFの早割価格は公式オンラインストア限定です。
                 </p>
               </div>
             </div>
@@ -183,9 +183,17 @@ export function PurchaseGuideSection() {
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-8">
-                お近くの量販店・販売店でもご予約いただけます。
+              <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-2">
+                お近くのSWALLOW製品取り扱い店舗でもご予約いただけます。
               </p>
+              <a 
+                href="https://swallow-scooter.com/pages/dealers" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-[hsl(var(--highlight))] underline hover:opacity-80 transition-opacity mb-8 inline-block"
+              >
+                販売店一覧はこちら
+              </a>
 
               {/* Discount Info */}
               <div className="mb-6">
@@ -372,7 +380,7 @@ export function PurchaseGuideSection() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-[#92400E] mb-1">納車時期</p>
-                    <p className="text-sm text-[#B45309]">2026年6月末予定</p>
+                    <p className="text-sm text-[#B45309]">2026年6月下旬以降順次発送</p>
                     <p className="text-xs text-[#B45309] mt-1">※生産状況により遅延する場合があります</p>
                   </div>
                 </div>
@@ -382,7 +390,7 @@ export function PurchaseGuideSection() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-[#92400E] mb-1">キャンセル・変更</p>
-                    <p className="text-sm text-[#B45309]">受託生産のため決済後のキャンセル・カラー変更はできません</p>
+                    <p className="text-sm text-[#B45309]">受注生産のため決済後のキャンセル・カラー変更はできません</p>
                   </div>
                 </div>
               </div>
@@ -404,7 +412,7 @@ export function PurchaseGuideSection() {
             </div>
             <div className="bg-background p-6 md:p-8">
               <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-4">
-                特定小型原付は発送前に本人確認を行うことが法律で義務付けられています。
+                特定小型原付は発送前に本人確認を行うことが必須となっています。
               </p>
               <p className="text-sm text-foreground leading-relaxed mb-4">
                 購入完了メールに記載されている<br />
@@ -412,7 +420,7 @@ export function PurchaseGuideSection() {
               </p>
               <div className="p-4 bg-[hsl(var(--warm-beige))] border-l-4 border-[hsl(var(--highlight))]">
                 <p className="text-xs text-[hsl(var(--highlight))] font-medium leading-relaxed">
-                  ※本人確認が完了しない場合は発送できません
+                  ※本人確認が完了しな���場合は発送できません
                 </p>
               </div>
             </div>
