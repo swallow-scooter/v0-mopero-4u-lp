@@ -26,7 +26,6 @@ const discountTiers: DiscountTier[] = [
     discount: 35,
     quantity: 40,
     price: 123370,
-    badge: { label: "人気", type: "popular" },
   },
   {
     discount: 32,
@@ -47,7 +46,6 @@ const discountTiers: DiscountTier[] = [
     discount: 20,
     quantity: 120,
     price: 151840,
-    badge: { label: "残りわずか", type: "limited" },
   },
 ]
 
