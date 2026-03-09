@@ -278,40 +278,23 @@ export function PurchaseGuideSection() {
                   LINEからのアクセスが最も確実です。
                 </p>
               </div>
-            </div>
-          </div>
-        </ScrollReveal>
 
-        {/* STEP 2: ご注意 */}
-        <ScrollReveal direction="up" delay={350}>
-          <div className="mb-10">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
-                <AlertTriangle className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 2</span>
-                <h3 className="font-serif text-lg md:text-xl text-foreground">ご注意</h3>
-              </div>
-            </div>
-            <div className="bg-[#FEF3C7] border border-[#F59E0B] p-6 md:p-8">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-10 h-10 bg-[#FDE68A]">
-                    <Clock className="w-5 h-5 text-[#B45309]" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-[#92400E] mb-1">納車時期</p>
-                    <p className="text-sm text-[#B45309]">2026年6月下旬以降順次発送</p>
-                    <p className="text-xs text-[#B45309] mt-1">※生産状況により遅延する場合があります</p>
-                  </div>
+              {/* ご注意 */}
+              <div className="mt-6 bg-[#FEF3C7] border border-[#F59E0B] p-5">
+                <div className="flex items-start gap-3 mb-4">
+                  <AlertTriangle className="w-5 h-5 text-[#B45309] flex-shrink-0 mt-0.5" />
+                  <p className="text-sm font-medium text-[#92400E]">ご注意</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-10 h-10 bg-[#FDE68A]">
-                    <XCircle className="w-5 h-5 text-[#B45309]" />
+                <div className="space-y-4 pl-8">
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-4 h-4 text-[#B45309] flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm text-[#B45309]">納車時期：2026年6月下旬以降順次発送</p>
+                      <p className="text-xs text-[#B45309] mt-0.5">※生産状況により遅延する場合があります</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-medium text-[#92400E] mb-1">キャンセル・変更</p>
+                  <div className="flex items-start gap-3">
+                    <XCircle className="w-4 h-4 text-[#B45309] flex-shrink-0 mt-0.5" />
                     <p className="text-sm text-[#B45309]">受注生産のため決済後のキャンセル・カラー変更はできません</p>
                   </div>
                 </div>
@@ -320,15 +303,15 @@ export function PurchaseGuideSection() {
           </div>
         </ScrollReveal>
 
-        {/* STEP 3: 本人確認について */}
-        <ScrollReveal direction="up" delay={400}>
+        {/* STEP 2: 本人確認について */}
+        <ScrollReveal direction="up" delay={350}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
                 <UserCheck className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 3</span>
+                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 2</span>
                 <h3 className="font-serif text-lg md:text-xl text-foreground">本人確認について</h3>
               </div>
             </div>
@@ -349,15 +332,15 @@ export function PurchaseGuideSection() {
           </div>
         </ScrollReveal>
 
-        {/* STEP 4: 納車後の手続き */}
-        <ScrollReveal direction="up" delay={450}>
+        {/* STEP 3: 納車後の手続き */}
+        <ScrollReveal direction="up" delay={400}>
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-6">
               <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))]">
                 <Truck className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 4</span>
+                <span className="text-xs text-[hsl(var(--highlight))] font-medium tracking-wider">STEP 3</span>
                 <h3 className="font-serif text-lg md:text-xl text-foreground">納車後の手続き</h3>
               </div>
             </div>
@@ -389,7 +372,7 @@ export function PurchaseGuideSection() {
         </ScrollReveal>
 
         {/* 補足情報: 購入前の準備と決済方法 */}
-        <ScrollReveal direction="up" delay={500}>
+        <ScrollReveal direction="up" delay={450}>
           <div className="mt-16 pt-10 border-t border-border">
             <h4 className="font-serif text-lg md:text-xl text-foreground text-center mb-8">
               購入についての補足情報
