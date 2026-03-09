@@ -93,6 +93,9 @@ export function EarlyBirdSection() {
           <p className="text-sm text-[hsl(var(--soft-brown))] max-w-md mx-auto leading-relaxed">
             早いほどお得にご購入いただけます。
           </p>
+          <p className="text-xs text-[hsl(var(--soft-brown))]/70 mt-2">
+            ※ 表示価格は送料抜きです
+          </p>
         </div>
       </ScrollReveal>
 
