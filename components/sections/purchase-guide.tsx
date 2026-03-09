@@ -183,9 +183,17 @@ export function PurchaseGuideSection() {
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-8">
-                お近くの量販店・販売店でもご予約いただけます。
+              <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-2">
+                お近くのSWALLOW製品取り扱い店舗でもご予約いただけます。
               </p>
+              <a 
+                href="https://swallow-scooter.com/pages/dealers" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-[hsl(var(--highlight))] underline hover:opacity-80 transition-opacity mb-8 inline-block"
+              >
+                販売店一覧はこちら
+              </a>
 
               {/* Discount Info */}
               <div className="mb-6">
