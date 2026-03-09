@@ -404,7 +404,7 @@ export function PurchaseGuideSection() {
             </div>
             <div className="bg-background p-6 md:p-8">
               <p className="text-sm text-[hsl(var(--soft-brown))] leading-relaxed mb-4">
-                特定小型原付は発送前に本人確認を行うことが法律で義務付けられています。
+                特定小型原付は発送前に本人確認を行うことが必須となっています。
               </p>
               <p className="text-sm text-foreground leading-relaxed mb-4">
                 購入完了メールに記載されている<br />
@@ -412,7 +412,7 @@ export function PurchaseGuideSection() {
               </p>
               <div className="p-4 bg-[hsl(var(--warm-beige))] border-l-4 border-[hsl(var(--highlight))]">
                 <p className="text-xs text-[hsl(var(--highlight))] font-medium leading-relaxed">
-                  ※本人確認が完了しな��場合は発送できません
+                  ※本人確認が完了しな���場合は発送できません
                 </p>
               </div>
             </div>
