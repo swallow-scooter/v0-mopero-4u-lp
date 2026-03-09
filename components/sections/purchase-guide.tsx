@@ -382,7 +382,7 @@ export function PurchaseGuideSection() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-[#92400E] mb-1">キャンセル・変更</p>
-                    <p className="text-sm text-[#B45309]">受託生産のため決済後のキャンセル・カラー変更はできません</p>
+                    <p className="text-sm text-[#B45309]">受注生産のため決済後のキャンセル・カラー変更はできません</p>
                   </div>
                 </div>
               </div>
