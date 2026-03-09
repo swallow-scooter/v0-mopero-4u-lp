@@ -401,7 +401,12 @@ export function PurchaseGuideSection() {
               </div>
               <div className="mt-6 p-4 bg-[hsl(var(--warm-beige))] border-l-4 border-[hsl(var(--highlight))]">
                 <p className="text-xs text-[hsl(var(--soft-brown))] leading-relaxed">
-                  ※SWALLOWアカウントを事前に作成し住所登録しておくとスムーズに購入できます
+                  ※<a 
+                    href="https://swallow-scooter.com/account/register" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="underline hover:text-[hsl(var(--charcoal))] transition-colors"
+                  >SWALLOWアカウント</a>を事前に作成し住所登録しておくとスムーズに購入できます
                 </p>
               </div>
             </div>
