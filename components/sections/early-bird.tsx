@@ -182,42 +182,7 @@ export function EarlyBirdSection() {
         </div>
       </ScrollReveal>
 
-      {/* Progress Indicator */}
-      <ScrollReveal direction="up" delay={500}>
-        <div className="mt-8 p-5 bg-background">
-          <div className="flex items-center justify-between mb-3">
-            <p className="text-xs text-[hsl(var(--soft-brown))] font-medium">
-              販売の流れ
-            </p>
-            <p className="text-xs text-[hsl(var(--highlight))] font-medium">
-              3月14日 12:00 販売開始
-            </p>
-          </div>
-          <div className="flex items-center gap-1">
-            {discountTiers.map((tier, index) => (
-              <div
-                key={tier.discount}
-                className="flex-1 h-2 bg-[hsl(var(--warm-beige))] relative overflow-hidden"
-                style={{
-                  flex: tier.quantity,
-                }}
-              >
-                {index === 0 && (
-                  <div className="absolute inset-0 bg-[hsl(var(--highlight))] opacity-30" />
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="flex justify-between mt-2">
-            <p className="text-[10px] text-[hsl(var(--soft-brown))]">
-              45%OFF
-            </p>
-            <p className="text-[10px] text-[hsl(var(--soft-brown))]">
-              20%OFF
-            </p>
-          </div>
-        </div>
-      </ScrollReveal>
+
     </div>
   )
 }
