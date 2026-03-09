@@ -21,6 +21,7 @@ import {
   Building2,
   Smartphone,
 } from "lucide-react"
+import { EarlyBirdSection } from "@/components/sections/early-bird"
 
 const preparationItems = [
   {
@@ -217,6 +218,9 @@ export function PurchaseGuideSection() {
             </div>
           </ScrollReveal>
         </div>
+
+        {/* Early Bird Discount Section */}
+        <EarlyBirdSection />
 
       </div>
 
