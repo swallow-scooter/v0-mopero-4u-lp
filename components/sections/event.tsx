@@ -54,13 +54,6 @@ export function EventSection() {
       mapUrl: "https://www.google.com/maps/search/?api=1&query=ヨドバシカメラ博多",
     },
     {
-      location: "ヨドバシカメラ秋葉原店 試乗会",
-      date: "2026年3月28日（土）・29日（日）",
-      venue: "",
-      reservations: 0,
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=ヨドバシカメラ秋葉原",
-    },
-    {
       location: "各地家電量販店試乗会",
       date: "詳しくは公式LINEにて通知いたします。",
       venue: "",
