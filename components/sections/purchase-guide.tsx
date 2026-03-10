@@ -269,10 +269,18 @@ export function PurchaseGuideSection() {
                   </div>
                 ))}
               </div>
-              {/* LINE配信案内 */}
+              {/* 決済ページ案内 */}
               <div className="mt-6 p-5 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))] text-center">
                 <p className="text-sm leading-relaxed">
-                  予約販売ページのURLはまもなく公開されます。公開まで今しばらくお待ちください。
+                  決済ページはこちら：
+                  <a 
+                    href="https://swallow-scooter.com/products/mopero-4u" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="underline hover:opacity-80 transition-opacity ml-1"
+                  >
+                    https://swallow-scooter.com/products/mopero-4u
+                  </a>
                 </p>
               </div>
 
