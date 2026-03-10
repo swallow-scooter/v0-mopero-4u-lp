@@ -16,11 +16,12 @@ export function TrustSection() {
     },
     {
       icon: Lock,
-      title: "大型リング錠と電子キーの二重ロック",
+      title: "電子キーと大型リング錠 (オプション) による二重ロック",
       description:
-        "物理的な大型リング錠と電子キーによる電源管理のダブルセキュリティ。二重の防犯対策で盗難リスクを大幅に低減します。",
+        "電子キーと物理的な大型リング錠による電源管理のダブルセキュリティ。二重の防犯対策で盗難リスクを大幅に低減します。",
+      note: "※ リング錠はオプションとなります",
       image: "/images/trust-nfckey.jpg",
-      alt: "大型リング錠と電子キーによる二重ロックシステム",
+      alt: "電子キーと大型リング錠による二重ロックシステム",
     },
     {
       icon: ParkingSquare,
@@ -72,6 +73,11 @@ export function TrustSection() {
               <p className="text-sm text-[hsl(var(--warm-white))]/60 leading-relaxed">
                 {item.description}
               </p>
+              {item.note && (
+                <p className="text-xs text-[hsl(var(--warm-white))]/40 mt-2">
+                  {item.note}
+                </p>
+              )}
             </div>
           ))}
         </div>
