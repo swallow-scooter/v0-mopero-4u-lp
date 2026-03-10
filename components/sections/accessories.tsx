@@ -25,7 +25,7 @@ const accessories: AccessoryItem[] = [
     description: "MOPERO 4Uのセキュリティを高める専用リングロック。",
     price: "5,000円",
     note: "※取り付け料金込み / 本体と同時購入のみ",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%99%E9%8C%A0-y3ZcoBZvIu5cOpZbW88jFi0ZbTMqD0.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%99%E9%8C%A0-removebg-HHcwd9ZLqgoRhcYcqBGLIDvTSwOZxf.png",
   },
   {
     category: "走行・充電",
@@ -33,7 +33,7 @@ const accessories: AccessoryItem[] = [
     description: "長距離移動や充電忘れの不安を解消。",
     price: "52,800円",
     note: "※送料別",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%8F%E3%82%99%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC-RVzWFrPsAjSkXxkt0LbY15Dzkb6kCL.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%8F%E3%82%99%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC-removebg-QEO7rzwsqcbR7io3DJXvXTDSZY6EKk.png",
     badge: "20% OFF",
   },
   {
@@ -41,7 +41,7 @@ const accessories: AccessoryItem[] = [
     name: "予備充電器",
     description: "自宅用と職場用など複数設置に便利。",
     price: "5,600円",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%85%85%E9%9B%BB%E5%99%A8-V3exh8NWFXPz05bZLNqI5rgAoDizWk.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%85%85%E9%9B%BB%E5%99%A8-removebg-Ng2IyOWgG9dq275CtH7pRqwNDOKGlS.png",
     badge: "20% OFF",
   },
   {
@@ -50,7 +50,7 @@ const accessories: AccessoryItem[] = [
     description: "丸みのあるやさしいデザインのヘルメット。",
     price: "6,800円",
     note: "※送料別",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%98%E3%83%AB%E3%83%A1%E3%83%83%E3%83%88-TgxDRzbkLqvqrARIERx0zHczXPQPWb.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%98%E3%83%AB%E3%83%A1%E3%83%83%E3%83%88-removebg-m29NtWrsF7fe84oOydnqaLfANZWlMH.png",
   },
   {
     category: "収納",
@@ -58,7 +58,7 @@ const accessories: AccessoryItem[] = [
     description: "買い物や通勤バッグに便利な大型バスケット。",
     price: "3,000円",
     note: "※送料別",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%AA%E3%82%A2%E3%83%8F%E3%82%99%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88-yp6zNhDo87bCoFAeS0EsLtYIv2Kpyd.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%AA%E3%82%A2%E3%83%8F%E3%82%99%E3%82%B9%E3%82%B1%E3%83%83%E3%83%88-removebg-GGleDfmR89ghHCKMvnHxMGFppayEuz.png",
   },
 ]
 
@@ -156,7 +156,7 @@ export function AccessoriesSection() {
               <div className="relative mx-auto mb-6">
                 <div className="w-32 h-32 rounded-full overflow-hidden bg-[hsl(var(--warm-beige))] flex items-center justify-center shadow-sm">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%BB%B6%E9%95%B7%E4%BF%9D%E8%A8%BC-wo7qxn8rhGPyVhhJCroPQdASu4NYVn.png"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%BB%B6%E9%95%B7%E4%BF%9D%E8%A8%BC-removebg-preview-csaD3Aj5Umib9bZKh2P6hdwO1c8u0l.png"
                     alt="延長保証"
                     width={100}
                     height={100}
