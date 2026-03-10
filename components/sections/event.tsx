@@ -141,7 +141,9 @@ export function EventSection() {
             お気軽にご登録ください。
           </p>
           <a
-            href="#"
+            href="https://lin.ee/JuBf9VM"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#06C755] text-white text-sm font-medium tracking-wide rounded-lg hover:bg-[#05b64d] transition-colors"
           >
             <svg

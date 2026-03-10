@@ -27,7 +27,9 @@ export function ClosingSection() {
             試乗予約する
           </a>
           <a
-            href="#price"
+            href="https://lin.ee/JuBf9VM"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 bg-[#06C755] text-white text-sm font-medium tracking-wide hover:bg-[#05b64d] transition-colors"
           >
             公式LINE登録でお知らせを受ける
