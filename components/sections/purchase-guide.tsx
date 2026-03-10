@@ -271,14 +271,13 @@ export function PurchaseGuideSection() {
               </div>
               {/* 決済ページ案内 */}
               <div className="mt-6 p-5 bg-[hsl(var(--charcoal))] text-[hsl(var(--warm-white))] text-center">
-                <p className="text-sm leading-relaxed mb-4">決済ページはこちら</p>
                 <a 
                   href="https://swallow-scooter.com/products/mopero-4u" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-block px-8 py-3 bg-[hsl(var(--warm-white))] text-[hsl(var(--charcoal))] font-medium text-sm hover:bg-opacity-90 transition-all"
                 >
-                  購入ページへ進む
+                  決済ページはこちら
                 </a>
               </div>
 
@@ -387,7 +386,7 @@ export function PurchaseGuideSection() {
                 <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--warm-beige))]">
                   <CheckCircle className="w-5 h-5 text-[hsl(var(--charcoal))]" />
                 </div>
-                <h5 className="font-serif text-base md:text-lg text-foreground">購入前の��備</h5>
+                <h5 className="font-serif text-base md:text-lg text-foreground">購��前の��備</h5>
               </div>
               <p className="text-sm text-[hsl(var(--soft-brown))] mb-6">
                 購入前に以下を準備しておくとスムーズに購入できます。
