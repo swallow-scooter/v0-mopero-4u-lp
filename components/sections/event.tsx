@@ -163,6 +163,46 @@ export function EventSection() {
           <p className="text-[hsl(var(--soft-brown))] text-sm mb-6">
             全国の量販店・販売店で開催。予約不要でお気軽にご参加いただけます。
           </p>
+
+          {/* 事前記入フォーム（イベント試乗会向け） */}
+          <div className="mb-8 bg-[hsl(var(--sand-beige))] p-8 md:p-10">
+            <div className="text-center max-w-lg mx-auto">
+              <h4 className="font-serif text-lg md:text-xl text-foreground mb-4">
+                イベント試乗会 事前記入フォーム
+              </h4>
+              <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-6">
+                予約は必須ではありませんが、事前にご記入いただくと当日スムーズにご案内できます。
+              </p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe6yD_DXjtk_pGpMXScj4-eYjQkG3k61BfOVwn2ouKU5Bqbag/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                  <path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Z" />
+                  <path d="M12 11h4" />
+                  <path d="M12 16h4" />
+                  <path d="M8 11h.01" />
+                  <path d="M8 16h.01" />
+                </svg>
+                事前記入フォームを開く
+              </a>
+            </div>
+          </div>
+
           <div className="space-y-4">
             {retailEvents.map((event) => (
               <div
@@ -204,45 +244,6 @@ export function EventSection() {
                 )}
               </div>
             ))}
-          </div>
-
-          {/* 事前予約フォーム（イベント試乗会向け） */}
-          <div className="mt-10 bg-[hsl(var(--sand-beige))] p-8 md:p-10">
-            <div className="text-center max-w-lg mx-auto">
-              <h4 className="font-serif text-lg md:text-xl text-foreground mb-4">
-                イベント試乗会 事前記入フォーム
-              </h4>
-              <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-6">
-                予約は必須ではありませんが、事前にご記入いただくと当日スムーズにご案内できます。
-              </p>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSe6yD_DXjtk_pGpMXScj4-eYjQkG3k61BfOVwn2ouKU5Bqbag/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                  <path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Z" />
-                  <path d="M12 11h4" />
-                  <path d="M12 16h4" />
-                  <path d="M8 11h.01" />
-                  <path d="M8 16h.01" />
-                </svg>
-                事前記入フォームを開く
-              </a>
-            </div>
           </div>
         </div>
 
