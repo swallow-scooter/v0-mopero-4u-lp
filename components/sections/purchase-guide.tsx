@@ -386,7 +386,7 @@ export function PurchaseGuideSection() {
                 <div className="flex items-center justify-center w-10 h-10 bg-[hsl(var(--warm-beige))]">
                   <CheckCircle className="w-5 h-5 text-[hsl(var(--charcoal))]" />
                 </div>
-                <h5 className="font-serif text-base md:text-lg text-foreground">購��前の��備</h5>
+                <h5 className="font-serif text-base md:text-lg text-foreground">購入前の準備</h5>
               </div>
               <p className="text-sm text-[hsl(var(--soft-brown))] mb-6">
                 購入前に以下を準備しておくとスムーズに購入できます。
