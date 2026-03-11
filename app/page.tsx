@@ -6,6 +6,7 @@ import { ComparisonSection } from "@/components/sections/comparison"
 import { BenefitsSection } from "@/components/sections/benefits"
 import { HighlightsSection } from "@/components/sections/highlights"
 import { PersonaSection } from "@/components/sections/persona"
+import { YoutubeReviewsSection } from "@/components/sections/youtube-reviews"
 import { OperationSection } from "@/components/sections/operation"
 import { FamilySection } from "@/components/sections/family"
 import { TrustSection } from "@/components/sections/trust"
@@ -41,6 +42,8 @@ export default function Page() {
         <HighlightsSection />
         {/* 5. Persona */}
         <PersonaSection />
+        {/* 5.5 YouTube Reviews */}
+        <YoutubeReviewsSection />
         {/* 6. Operation */}
         <OperationSection />
         {/* 7. Family Share */}
