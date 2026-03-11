@@ -14,6 +14,14 @@ export function EventSection() {
 
   const events: Event[] = [
     {
+      location: "SWALLOW横浜日吉試乗会（要予約）",
+      date: "",
+      venue: "",
+      reservations: 0,
+      mapUrl: "",
+      calendlyUrl: "https://calendly.com/zero9/zero9-swallow",
+    },
+    {
       location: "横浜メディア発表会・試乗会",
       date: "2026年3月13日（金）",
       venue: "テックハブヨコハマ",
@@ -75,14 +83,6 @@ export function EventSection() {
       venue: "",
       reservations: 0,
       mapUrl: "",
-    },
-    {
-      location: "SWALLOW横浜日吉試乗会（要予約）",
-      date: "",
-      venue: "",
-      reservations: 0,
-      mapUrl: "",
-      calendlyUrl: "https://calendly.com/zero9/zero9-swallow",
     },
   ]
 
