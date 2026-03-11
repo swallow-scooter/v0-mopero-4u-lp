@@ -12,15 +12,18 @@ export function EventSection() {
     calendlyUrl?: string
   }
 
-  const events: Event[] = [
-    {
-      location: "SWALLOW横浜日吉試乗会（要予約）",
-      date: "",
-      venue: "",
-      reservations: 0,
-      mapUrl: "",
-      calendlyUrl: "https://calendly.com/zero9/zero9-swallow",
-    },
+  // 横浜日吉店舗（要予約）
+  const storeEvent: Event = {
+    location: "SWALLOW横浜日吉試乗会",
+    date: "常時開催",
+    venue: "横浜市港北区日吉",
+    reservations: 0,
+    mapUrl: "",
+    calendlyUrl: "https://calendly.com/zero9/zero9-swallow",
+  }
+
+  // イベント試乗会（量販店・販売店）
+  const retailEvents: Event[] = [
     {
       location: "横浜メディア発表会・試乗会",
       date: "2026年3月13日（金）",
@@ -30,7 +33,7 @@ export function EventSection() {
     },
     {
       location: "東京（高円寺）試乗会",
-      date: "2026年3月29日（日）10:00〜18:00 事前予約不要",
+      date: "2026年3月29日（日）10:00〜18:00",
       venue: "ジェイアール東日本都市開発 高架下空き倉庫",
       reservations: 18,
       mapUrl: "https://www.google.com/maps/place/%E9%AB%98%E6%9E%B6%E4%B8%8B%E7%A9%BA%E3%81%8D%E5%80%89%E5%BA%AB/@35.7051741,139.6424888,17z/data=!3m1!4b1!4m6!3m5!1s0x6018f3718f6cc11b:0x313a4a9b7d97b498!8m2!3d35.7051741!4d139.6446114!16s%2Fg%2F11spzn3492?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D",
@@ -106,77 +109,146 @@ export function EventSection() {
           </p>
         </ScrollReveal>
 
-        <div className="space-y-4">
-          {events.map((event) => (
-            <div
-              key={event.location}
-              className="bg-[hsl(var(--warm-white))] p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 justify-between"
-            >
-              <div className="flex-1">
-                <h3 className="font-serif text-lg text-foreground mb-1">
-                  {event.location}
-                </h3>
-                <p className="text-sm text-[hsl(var(--soft-brown))]">
-                  {event.date}{event.venue ? ` / ${event.venue}` : ""}
-                </p>
-              </div>
-              {event.calendlyUrl ? (
-                <a
-                  href={event.calendlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 border border-border text-sm text-foreground font-medium tracking-wide hover:bg-foreground hover:text-[hsl(var(--warm-white))] transition-colors shrink-0"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                    <line x1="16" y1="2" x2="16" y2="6" />
-                    <line x1="8" y1="2" x2="8" y2="6" />
-                    <line x1="3" y1="10" x2="21" y2="10" />
-                  </svg>
-                  予約する
-                </a>
-              ) : event.mapUrl ? (
-                <a
-                  href={event.mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 border border-border text-sm text-foreground font-medium tracking-wide hover:bg-foreground hover:text-[hsl(var(--warm-white))] transition-colors shrink-0"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  開催場所マップ
-                </a>
-              ) : null}
+        {/* セクション1: 横浜日吉店舗（要予約） */}
+        <div className="mb-16">
+          <h3 className="font-serif text-lg md:text-xl text-foreground mb-2">
+            横浜日吉店舗
+          </h3>
+          <p className="text-[hsl(var(--soft-brown))] text-sm mb-6">
+            完全予約制でじっくりご体験いただけます。
+          </p>
+          <div className="bg-[hsl(var(--warm-white))] p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 justify-between">
+            <div className="flex-1">
+              <h4 className="font-serif text-lg text-foreground mb-1">
+                {storeEvent.location}
+                <span className="ml-2 text-xs font-sans text-[hsl(var(--warm-white))] bg-foreground px-2 py-0.5">要予約</span>
+              </h4>
+              <p className="text-sm text-[hsl(var(--soft-brown))]">
+                {storeEvent.date}{storeEvent.venue ? ` / ${storeEvent.venue}` : ""}
+              </p>
             </div>
-          ))}
+            <a
+              href={storeEvent.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors shrink-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+              予約する
+            </a>
+          </div>
+        </div>
+
+        {/* セクション2: イベント試乗会（量販店・販売店） */}
+        <div>
+          <h3 className="font-serif text-lg md:text-xl text-foreground mb-2">
+            イベント試乗会
+          </h3>
+          <p className="text-[hsl(var(--soft-brown))] text-sm mb-6">
+            全国の量販店・販売店で開催。予約不要でお気軽にご参加いただけます。
+          </p>
+
+          {/* 事前記入フォーム（イベント試乗会向け） */}
+          <div className="mb-8 bg-[hsl(var(--sand-beige))] p-8 md:p-10">
+            <div className="text-center max-w-lg mx-auto">
+              <h4 className="font-serif text-lg md:text-xl text-foreground mb-4">
+                イベント試乗会 事前記入フォーム
+              </h4>
+              <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-6">
+                予約は必須ではありませんが、事前にご記入いただくと当日スムーズにご案内できます。
+              </p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe6yD_DXjtk_pGpMXScj4-eYjQkG3k61BfOVwn2ouKU5Bqbag/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                  <path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Z" />
+                  <path d="M12 11h4" />
+                  <path d="M12 16h4" />
+                  <path d="M8 11h.01" />
+                  <path d="M8 16h.01" />
+                </svg>
+                事前記入フォームを開く
+              </a>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            {retailEvents.map((event) => (
+              <div
+                key={event.location}
+                className="bg-[hsl(var(--warm-white))] p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 justify-between"
+              >
+                <div className="flex-1">
+                  <h4 className="font-serif text-lg text-foreground mb-1">
+                    {event.location}
+                  </h4>
+                  <p className="text-sm text-[hsl(var(--soft-brown))]">
+                    {event.date}{event.venue ? ` / ${event.venue}` : ""}
+                  </p>
+                </div>
+                {event.mapUrl && (
+                  <a
+                    href={event.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 border border-border text-sm text-foreground font-medium tracking-wide hover:bg-foreground hover:text-[hsl(var(--warm-white))] transition-colors shrink-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    開催場所マップ
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* 公式LINE登録 */}
-        <div className="mt-16 text-center">
+        <div className="mt-10 text-center">
           <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-2">
             試乗会の最新情報やお得なキャンペーン情報をお届けします。
           </p>
