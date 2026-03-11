@@ -175,8 +175,50 @@ export function EventSection() {
           ))}
         </div>
 
+        {/* 事前予約フォーム */}
+        <div className="mt-16 bg-[hsl(var(--warm-white))] p-8 md:p-10">
+          <div className="text-center max-w-lg mx-auto">
+            <h3 className="font-serif text-lg md:text-xl text-foreground mb-4">
+              事前予約フォーム
+            </h3>
+            <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-2">
+              予約は必須ではありませんが、事前にご記入いただくと当日スムーズにご案内できます。
+            </p>
+            <p className="text-[hsl(var(--soft-brown))] text-xs leading-relaxed mb-6">
+              ※SWALLOW横浜日吉試乗会のみ要予約となります。
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe6yD_DXjtk_pGpMXScj4-eYjQkG3k61BfOVwn2ouKU5Bqbag/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-foreground text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                <path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Z" />
+                <path d="M12 11h4" />
+                <path d="M12 16h4" />
+                <path d="M8 11h.01" />
+                <path d="M8 16h.01" />
+              </svg>
+              事前予約フォームを記入する
+            </a>
+          </div>
+        </div>
+
         {/* 公式LINE登録 */}
-        <div className="mt-16 text-center">
+        <div className="mt-10 text-center">
           <p className="text-[hsl(var(--soft-brown))] text-sm leading-relaxed mb-2">
             試乗会の最新情報やお得なキャンペーン情報をお届けします。
           </p>
