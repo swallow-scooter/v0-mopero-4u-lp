@@ -117,7 +117,7 @@ export function HeroSection() {
             </a>
             <a
               href="https://swallow-scooter.com/products/mopero-4u"
-              className="inline-flex items-center justify-center px-8 py-4 border border-[hsl(var(--warm-white))]/30 text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-[hsl(var(--warm-white))]/10 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[hsl(var(--highlight))] text-white text-sm font-medium tracking-wide hover:opacity-90 transition-colors"
             >
               購入ページはこちら
             </a>
