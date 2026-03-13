@@ -116,10 +116,12 @@ export function HeroSection() {
               価格と購入方法を確認
             </a>
             <a
-              href="#trial"
+              href="https://swallow-scooter.com/products/mopero-4u"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 border border-[hsl(var(--warm-white))]/30 text-[hsl(var(--warm-white))] text-sm font-medium tracking-wide hover:bg-[hsl(var(--warm-white))]/10 transition-colors"
             >
-              試乗会を確認
+              購入ページはこちら
             </a>
           </div>
         </ScrollReveal>
