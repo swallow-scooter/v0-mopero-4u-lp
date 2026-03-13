@@ -111,9 +111,19 @@ export function PurchaseGuideSection() {
           </p>
         </ScrollReveal>
         <ScrollReveal direction="up" delay={100}>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight text-balance mb-20 text-center">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight text-balance mb-8 text-center">
             特別価格でお届けします。
           </h2>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={150}>
+          <div className="flex justify-center mb-20">
+            <a
+              href="https://swallow-scooter.com/products/mopero-4u"
+              className="inline-flex items-center justify-center px-10 py-4 bg-[hsl(var(--highlight))] text-white text-sm font-medium tracking-wide hover:opacity-90 transition-colors"
+            >
+              購入ページはこちら
+            </a>
+          </div>
         </ScrollReveal>
 
         {/* Price Cards - 2 Column Layout */}
